@@ -1,0 +1,108 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-clock {
+  background-image: url(../images/icons.png);
+  background-position: -237px -40px;
+  width: 26px;
+  height: 30px;
+}
+.icon-countdown {
+  background-image: url(../images/icons.png);
+  background-position: 0px 0px;
+  width: 172px;
+  height: 37px;
+}
+.icon-dome {
+  background-image: url(../images/icons.png);
+  background-position: -121px -109px;
+  width: 35px;
+  height: 36px;
+}
+.icon-free-vree-points {
+  background-image: url(../images/icons.png);
+  background-position: 0px -52px;
+  width: 58px;
+  height: 42px;
+}
+.icon-gloves {
+  background-image: url(../images/icons.png);
+  background-position: -237px 0px;
+  width: 36px;
+  height: 25px;
+}
+.icon-heavy {
+  background-image: url(../images/icons.png);
+  background-position: -55px -167px;
+  width: 44px;
+  height: 26px;
+}
+.icon-high-drop-rate {
+  background-image: url(../images/icons.png);
+  background-position: -73px -52px;
+  width: 38px;
+  height: 39px;
+}
+.icon-key {
+  background-image: url(../images/icons.png);
+  background-position: -187px 0px;
+  width: 35px;
+  height: 35px;
+}
+.icon-knives {
+  background-image: url(../images/icons.png);
+  background-position: -172px -167px;
+  width: 42px;
+  height: 18px;
+}
+.icon-members {
+  background-image: url(../images/icons.png);
+  background-position: -126px -52px;
+  width: 36px;
+  height: 36px;
+}
+.icon-pistols {
+  background-image: url(../images/icons.png);
+  background-position: -237px -85px;
+  width: 27px;
+  height: 26px;
+}
+.icon-rare-skins {
+  background-image: url(../images/icons.png);
+  background-position: 0px -109px;
+  width: 49px;
+  height: 43px;
+}
+.icon-rifles {
+  background-image: url(../images/icons.png);
+  background-position: -114px -167px;
+  width: 43px;
+  height: 21px;
+}
+.icon-smgs {
+  background-image: url(../images/icons.png);
+  background-position: 0px -167px;
+  width: 40px;
+  height: 30px;
+}
+.icon-weekly-giveaway {
+  background-image: url(../images/icons.png);
+  background-position: -64px -109px;
+  width: 42px;
+  height: 43px;
+}

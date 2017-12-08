@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})
+
+        <div class="content-wrap">
+
+            @@include('./header.html')
+            @@include('./navbar.html')
+
+            <div class="user-center-wrap clearfix">
+
+                @@include('./sidebar.html', {"active": "accountInfo"})
+
+                <div class="ucenter-content">
+                    <div class="panel panel-ucenter">
+                        <div class="panel-heading">Account Info</div>
+                        <div class="panel-body clearfix">
+                            <div class="account-info clearfix">
+                                <img class="avatar" src="images/avatar_default.png" alt="">
+                                <form class="form-horizontal account-profile-form clearfix">
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="control-label">Account</label>
+                                        <div class="pull-left">
+                                            <span class="control-text">dayday1024@sina.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-2 control-label">Steam Name</label>
+                                        <div class="pull-left">
+                                            <span class="control-text">DDy</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-2 control-label">Points</label>
+                                        <div class="pull-left">
+                                            <span class="control-text point">123,000</span>
+                                            <a class="deposit" href="javascript:void(0)" data-toggle="modal" data-target="#topupModal">
+                                                <i class="icon iconfont icon-deposit"></i> Add Points</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-2 control-label">email</label>
+                                        <div class="pull-left">
+                                            <span class="control-text">12365878@qq.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-2 control-label">Trade URL</label>
+                                        <div class="pull-left">
+                                            <input type="text" value="https://steamcommunity.com/tradeoffer/new/?partner=329050600&token=HRInJTsP" class="form-control trade-url"
+                                                placeholder="Trade URL">
+                                            <p class="help-block">Or get your trade URL here...</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="sub-btn">
+                                            <button type="submit" class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <img class="banner-account-Info" src="images/banner-accountInfo.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./footer.html')
+        </div>
+    </main>
+
+    <div class="modal fade topup-modal" tabindex="-1" role="dialog" id="topupModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">TOP UP WITH VP</h4>
+                </div>
+                <div class="modal-body clearfix modal-body-effect">
+                    <div class="deposit-select clearfix">
+                        <div class="deposit-case">
+                            <div class="pay-by-cash">
+                                <img src="images/case.png" alt="case">
+                            </div>
+                            <a type="button" class="btn" href="/transaction/cash">Pay By Cash</a>
+                        </div>
+                        <div class="deposit-skin">
+                            <div class="pay-by-steam-skins">
+                                <img src="images/skin.png" alt="skin">
+                            </div>
+                            <a type="button" class="btn" href="/transaction/skins">Pay By Steam Skins</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
+    @@include('./foot.html')
+</body>
+
+</html>

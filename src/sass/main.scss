@@ -1,0 +1,414 @@
+@import "bootstrap.scss";
+@import "common.scss";
+@import "../css/sprite.css";
+.lottery-wrapper {
+    margin-top: 75px;
+    .lottery-container {
+        position: relative;
+        height: 230px;
+        background: #18223d;
+        overflow: hidden;
+        width: 1080px;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        ul li {
+            float: left;
+            position: relative;
+            width: 180px;
+            height: 190px;
+            text-align: center;
+            border-radius: 0;
+            background-image: url(../images/skin-bg.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            img {
+                width: auto;
+                max-width: 90%;
+            }
+        }
+    }
+    .con-container {
+        position: absolute;
+        width: 100%;
+        height: 230px;
+        z-index: 100;
+        background-image: -webkit-linear-gradient(left, rgba(16, 19, 38, 1) 0, rgba(16, 19, 38, .6) 50%, rgba(16, 19, 38, 1) 100%);
+        background-image: -o-linear-gradient(left, rgba(16, 19, 38, 1) 0, rgba(16, 19, 38, .6) 50%, rgba(16, 19, 38, 1) 100%);
+        background-image: -webkit-gradient(linear, 50% left, 50% right, from(rgba(16, 19, 38, 1)), to(rgba(16, 19, 38, .6)));
+        background-image: linear-gradient(to right, rgba(16, 19, 38, 1) 0, rgba(16, 19, 38, .6) 615px, rgba(16, 19, 38, 1));
+    }
+    .con-container-c {
+        position: absolute;
+        width: 100%;
+        height: 231px;
+        z-index: 100;
+        background-image: -webkit-linear-gradient(left, rgba(16, 19, 38, 1) 0, rgba(16, 19, 38, .6) 50%, rgba(16, 19, 38, 1) 100%);
+        background-image: -o-linear-gradient(left, rgba(16, 19, 38, 1) 0, rgba(16, 19, 38, .6) 50%, rgba(16, 19, 38, 1) 100%);
+        background-image: -webkit-gradient(linear, 50% left, 50% right, from(rgba(59, 11, 78, 1)), to(rgba(58, 11, 78, 1)));
+        background-image: linear-gradient(to right, rgba(16, 19, 38, 1) 0, rgba(16, 19, 38, 0) 615px, rgba(16, 19, 38, 1));
+    }
+    .lottery-container ul {
+        position: absolute;
+        margin: 25px 0 0px 0;
+        left: -90px;
+        width: 20000px;
+        background-image: url(../images/lottery-weapon-bg.png);
+        li {
+            &:before {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 166px;
+                background-color: #161e38;
+                top: 12px;
+                left: 0;
+                z-index: 999;
+            }
+        }
+    }
+    .lottery-midline {
+        display: inline-block;
+        width: 219px;
+        height: 230px;
+        position: absolute;
+        z-index: 999;
+        left: 50%;
+        margin-left: -15px;
+        height: 240px;
+        background: url('../images/line-c.png') no-repeat;
+    }
+}
+
+.btn-open {
+    text-align: center;
+    .btn-open-cost {
+        font-size: 18px;
+        line-height: 1;
+        color: #fff;
+        margin-top: 60px;
+        margin-bottom: 29px;
+        &>span {
+            font-size: 32px;
+            color: #f6dc00;
+            i {
+                font-size: 32px;
+            }
+        }
+    }
+    .btn-doing {
+        display: inline-block;
+        font-size: 19px;
+        color: #fff;
+        text-align: center;
+        border: 1px solid rgb(251, 60, 55);
+        background-color: rgb(222, 35, 30);
+        background-image: -moz-linear-gradient( 90deg, rgb(255, 64, 59) 0%, rgb(222, 35, 30) 40%, rgb(189, 5, 0) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(255, 64, 59) 0%, rgb(222, 35, 30) 40%, rgb(189, 5, 0) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(255, 64, 59) 0%, rgb(222, 35, 30) 40%, rgb(189, 5, 0) 100%);
+        line-height: 50px;
+        width: 190px;
+        height: 50px;
+        margin: 0 57px;
+        text-decoration: none;
+        transition: all .1s ease-in-out;
+        &:hover {
+            background-color: #ff4a44;
+            background-image: none;
+        }
+    }
+}
+
+.case-title {
+    display: inline-block;
+    background-image: url(../images/title-line.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left bottom;
+    .case-title-text {
+        display: inline-block;
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-family: 'Euphemia';
+        color: #fff;
+        margin: 0;
+        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#b1bfcd), to(#eef8ff));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+.skins-list {
+    &>.skin-item {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 180px;
+        height: 192px;
+        margin-right: 22px;
+        margin-bottom: 25px;
+        background: url('../images/skin-bg-v2.png') no-repeat;
+        background-size: cover;
+        padding: 10px;
+        text-align: center;
+        .skin-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.2;
+            color: #fff;
+            height: 30%;
+            overflow: hidden;
+            font-size: 12px;
+        }
+    }
+    .skin-img {
+        max-height: 70%;
+        max-width: 95%;
+    }
+}
+
+.case-items {
+    margin-top: 110px;
+    text-align: center;
+    .skins-list {
+        margin-left: 30px;
+        margin-top: 35px;
+    }
+}
+
+.user-center-wrap {
+    position: relative;
+    padding: 60px 65px 0 65px;
+    .sidebar-menu {
+        float: left;
+        background-color: #18223d;
+        width: 260px;
+        display: inline-block;
+        .sidebarview {
+            border-top: 1px solid #0b0827;
+            &:first-child {
+                border-top: 0;
+            }
+            &>.link,
+            &>ul>li>a {
+                display: inline-block;
+                padding-left: 60px;
+                width: 100%;
+                height: 60px;
+                line-height: 60px;
+                font-size: 14px;
+                color: #89b6fb;
+                text-decoration: none;
+            }
+            &>ul>li>a {
+                &.active,
+                &:hover {
+                    background: #295185;
+                    color: #fff;
+                }
+            }
+            &>.link {
+                position: relative;
+                .icon {
+                    position: absolute;
+                    left: 35px;
+                }
+            }
+        }
+    }
+    .ucenter-content {
+        width: 100%;
+        padding-left: 295px;
+        .panel-ucenter {
+            min-height: 602px;
+            background-color: #18223d;
+            padding: 0 35px;
+            .panel-heading {
+                height: 60px;
+                font-size: 18px;
+                color: #89b6fb;
+                padding: 0;
+                line-height: 60px;
+                border-bottom: 1px solid #295185;
+            }
+            .panel-body {
+                padding: 30px 0;
+            }
+        }
+    }
+}
+
+.account-info {
+    .avatar {
+        float: left;
+        width: 90px;
+        height: 90px;
+    }
+    .account-profile-form {
+        float: left;
+        margin-left: 20px;
+    }
+    .control-label {
+        float: left;
+        padding: 0;
+        margin: 0;
+        line-height: 40px;
+        width: 92px;
+        margin-right: 20px;
+        font-size: 14px;
+        color: #295185;
+        font-weight: normal;
+    }
+    .form-control {
+        display: inline-block;
+    }
+    .control-text {
+        line-height: 40px;
+        text-align: right;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .point {
+        padding-right: 20px;
+        font-weight: bold;
+        color: $brand-primary;
+        border-right: 1px solid #295185;
+    }
+    .deposit {
+        margin-left: 20px;
+        font-size: 14px;
+        color: #89b6fb;
+        text-decoration: none;
+    }
+    .trade-url {
+        width: 530px;
+    }
+    .sub-btn {
+        margin-left: 112px;
+        margin-top: 25px;
+    }
+    .form-group {
+        margin-bottom: 2px;
+    }
+    .help-block {
+        font-size: 12px;
+        color: $brand-primary;
+    }
+}
+
+.banner-account-Info {
+    display: block;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.topup-modal {
+    .modal-content {
+        background: transparent;
+        position: relative;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .modal-header {
+        border: 0;
+        padding: 5px 0;
+        .close {
+            color: #fff;
+            filter: alpha(opacity=100);
+            opacity: 1;
+            font-size: 32px;
+            position: absolute;
+            top: 20px;
+            right: -25px;
+        }
+    }
+    .modal-title {
+        color: #fff;
+        font-size: 30px;
+        line-height: 1;
+        font-weight: bold;
+    }
+    .modal-body {
+        background: #442151;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .modal-body-effect {
+        background: #0b0827;
+        background-image: -moz-linear-gradient( 90deg, rgb(0,158,182) 0%, rgb(8,118,177) 40%, rgb(15,77,171) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(0,158,182) 0%, rgb(8,118,177) 40%, rgb(15,77,171) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(0,158,182) 0%, rgb(8,118,177) 40%, rgb(15,77,171) 100%);
+    }
+    .pay-by-cash,
+    .pay-by-steam-skins {
+        width: 100%;
+        height: 205px;
+        text-align: center;
+    }
+    .pay-by-cash {
+        padding-top: 35px;
+    }
+    .deposit-case, .deposit-skin {
+        width: 50%;
+        float: left;
+        text-align: center;
+        padding: 20px 0 70px 0;
+    }
+    .deposit-case {
+        border-right: 1px solid #221028;
+    }
+    .deposit-select .btn {
+        background: transparent;
+        border: 1px solid #ffd800;
+        color: #ffd800;
+        font-size: 18px;
+        padding: 6px 27px;
+        margin-top: 15px;
+    }
+}
+
+.debris-bag {
+    .fileter {
+        height: 70px;
+        .btn-group {
+            margin-top: 15px;
+        }
+        .dropdown-menu {
+            width: 200px;
+        }
+        .cate {
+            display: inline-block;
+            > li {
+                width: 100px;
+                height: 70px;
+                background: #16294a;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                float: left;
+                text-align: center;
+                padding: 8px;
+                color: #fff;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                flex-direction: column;
+                .icon-img {
+                    flex: 1;
+                }
+                span {
+                    flex: 1;
+                    display: block;
+                }
+            }
+        }
+    }
+}

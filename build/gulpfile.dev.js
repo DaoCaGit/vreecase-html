@@ -11,7 +11,6 @@ var concat = require('gulp-concat'); //合并文件
 var imagemin = require('gulp-imagemin'); //图片压缩 
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
-var spritesmith = require('gulp.spritesmith');
 var gutil = require('gulp-util');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
@@ -42,6 +41,7 @@ function dev() {
                 stream: true
             }));
     });
+
     /** 
      * concat 
      */
@@ -118,11 +118,9 @@ function dev() {
      * 图片处理 
      */
     gulp.task('images:dev', function () {
-        return gulp.src(Config.img.src).pipe(imagemin({
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        })).pipe(gulp.dest(Config.img.dist)).pipe(reload({
+        return gulp.src(Config.img.src)
+        .pipe(gulp.dest(Config.img.dist))
+        .pipe(reload({
             stream: true
         }));
     });
@@ -160,6 +158,7 @@ function dev() {
         });
         // Watch .html files  
         gulp.watch(Config.html.src, ['html:dev']);
+        gulp.watch(Config.html.dir + '_include/*.html', ['html:dev']);
         // Watch .concat files  
         gulp.watch(Config.html.src, ['concat:dev']);
         // Watch .css files  

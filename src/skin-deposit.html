@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})')
+
+        <div class="content-wrap">
+
+            @@include('./header.html') @@include('./navbar.html')
+
+            <div class="user-center-wrap clearfix">
+                @@include('./breadcrumb.html')
+
+                <div class="ucenter-content content-full">
+                    <div class="panel panel-ucenter">
+                        <div class="panel-heading">Account Info</div>
+                        <div class="panel-body">
+                            <div id="success_msg_box" style="display:none;" class="load_tip_box">
+                            </div>
+
+                            <div class="load_tip_box">
+                                <p class="tip_box_title" id="load_tip_msg">Loaded 25 available items from cache -
+                                    <a href="javascript:void(0);" class="text-gold" id="force_reload">
+                                        <u>Force reload</u>
+                                    </a>
+                                </p>
+                            </div>
+                            <!-- /load tip box -->
+                            <div class="player_points">
+                                Your Points:
+                                <i class="icon iconfont icon-vp text-i"></i>
+                                <span class="text-gold user_points"> 8,511,195</span>
+                            </div>
+                            <!-- player_points -->
+                            <div class="clearfix deposit_inventory_wrap">
+                                <div class="deposit_box pull-left">
+                                    <div class="deposit_box_inner">
+                                        <div class="inventroy_title_box">
+                                            <ul class="skin-info clearfix">
+                                                <li>Your Inventory:
+                                                    <span id="inventory_count" class="text-gold">25</span>
+                                                </li>
+                                                <li>Value:
+                                                    <i class="icon iconfont icon-vp text-i"></i>&nbsp;
+                                                    <span id="inventory_value" class="text-gold">81</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="deposit_box_operating">
+                                            <form class="form-inline" id="searchform">
+                                                <div class="form-group">
+                                                    <div class="input-group input-search">
+                                                        <span class="input-group-addon" id="keywords-addon">
+                                                            <i class="icon iconfont icon-search"></i>
+                                                        </span>
+                                                        <input type="text" name="keywords" id="keywords" class="form-control search" placeholder="Search" aria-describedby="keywords-addon">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control select-inverse" id="orderby" name="orderby">
+                                                        <option value="0">Default</option>
+                                                        <option value="1">Price Descending</option>
+                                                        <option value="2">Price Ascending</option>
+                                                        <option value="3">Name A-Z</option>
+                                                    </select>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <ul class="clearfix deposit_items" id="inventory">
+                                            <li id="item_8005509155" data-points="7" data-extra="0" data-assetid="8005509155"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box item-selected">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>7</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/IzMF03bi9WpSBq-S-ekoE33L-iLqGFHVaU25ZzQNQcXdB2ozio1RrlIWFK3UfvMYB8UsvjiMXojflsZalyxSh31CIyHz2GZ-KuFpPsrTzBG0ovCCC3q5bDOdLCSNHgpqT7JdNDzf_jH05-jCRDmcQ-t4Q1tRLqZW-mVBa8_YOQx9itAdqGq0mFZwCxo8e9VKaVK_nndKZL-ckDdPaA"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Sealed Graffiti | King Me (Tracer Yellow)</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6870624912" data-points="5" data-extra="0" data-assetid="6870624912"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="junk"><span>JUNK</span></li>
+                                                    <li class="weapon_points"><p class="red">JUNK</p></li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFEuh_KQJTtEuI63xIXbxqOtauyClTMEsJV1jruS89T3iQKx_BBqa2j3JpjVLFH1xpp0EQ"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_8123964942" data-points="3" data-extra="0" data-assetid="8123964942"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/IzMF03bi9WpSBq-S-ekoE33L-iLqGFHVaU25ZzQNQcXdB2ozio1RrlIWFK3UfvMYB8UsvjiMXojflsZalyxSh31CIyHz2GZ-KuFpPsrTzBG0puWyTCW5aWOSKXaATwlpTeBcN2iI9zWl4-TCETrBEuAvRFtSKKYGo2dMa8uAbQx9itAdqGq0mFZwCxo8e9VKaVK5myAXZblANsFrkA"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Sealed Graffiti | GGEZ (Blood Red)</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_8123964935" data-points="3" data-extra="0" data-assetid="8123964935"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/IzMF03bi9WpSBq-S-ekoE33L-iLqGFHVaU25ZzQNQcXdB2ozio1RrlIWFK3UfvMYB8UsvjiMXojflsZalyxSh31CIyHz2GZ-KuFpPsrTzBG0puWyTCW5aWOSKXaATwlpTeBcN2iI9zWl4-TCETrBEuAvRFtSKKYGo2dMa8uAbQx9itAdqGq0mFZwCxo8e9VKaVK5myAXZblANsFrkA"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Sealed Graffiti | GGEZ (Blood Red)</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_8082498966" data-points="3" data-extra="0" data-assetid="8082498966"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/IzMF03bi9WpSBq-S-ekoE33L-iLqGFHVaU25ZzQNQcXdB2ozio1RrlIWFK3UfvMYB8UsvjiMXojflsZalyxSh31CIyHz2GZ-KuFpPsrTzBG0su2fDm25bWCWeXKPT1sxTLBaYDrb-GX2t7_BQ2rOFbotEVhXLKoCpzBJNciBOQx9itAdqGq0mFZwCxo8e9VKaVK4m3dCMuyDRQQQlg"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Sealed Graffiti | Sorry (Shark White)</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_8082498927" data-points="3" data-extra="0" data-assetid="8082498927"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/IzMF03bi9WpSBq-S-ekoE33L-iLqGFHVaU25ZzQNQcXdB2ozio1RrlIWFK3UfvMYB8UsvjiMXojflsZalyxSh31CIyHz2GZ-KuFpPsrTzBG0su2fDm25bWCWeXKPT1sxTLBaYDrb-GX2t7_BQ2rOFbotEVhXLKoCpzBJNciBOQx9itAdqGq0mFZwCxo8e9VKaVK5yyJLM-9Z94PoZQ"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Sealed Graffiti | Sorry (Bazooka Pink)</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6895617422" data-points="3" data-extra="0" data-assetid="6895617422"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYznarJJjkQ6ovjw4SPlfP3auqEl2oBuJB1j--WoY322QziqkdpZGr3IteLMlhpw4RJCv8"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Gamma Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6887287315" data-points="3" data-extra="0" data-assetid="6887287315"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYznarJJjkQ6ovjw4SPlfP3auqEl2oBuJB1j--WoY322QziqkdpZGr3IteLMlhpw4RJCv8"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Gamma Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6866106811" data-points="3" data-extra="0" data-assetid="6866106811"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYynaSdJGhE74y0wNWIw_OlNuvXkDpSuZQmi--SrN-h3gey-Uo6YWmlIoCLMlhplhFFvwI"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma 3 Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6866106293" data-points="3" data-extra="0" data-assetid="6866106293"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFAuhqSaKWtEu43mxtbbk6b1a77Twm4Iu8Yl3bCU9Imii1Xt80M5MmD7JZjVLFH-6VnQJQ"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma 2 Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6840168029" data-points="3" data-extra="0" data-assetid="6840168029"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYznarJJjkQ6ovjw4SPlfP3auqEl2oBuJB1j--WoY322QziqkdpZGr3IteLMlhpw4RJCv8"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Gamma Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6833722708" data-points="3" data-extra="0" data-assetid="6833722708"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFAuhqSaKWtEu43mxtbbk6b1a77Twm4Iu8Yl3bCU9Imii1Xt80M5MmD7JZjVLFH-6VnQJQ"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma 2 Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6822034455" data-points="3" data-extra="0" data-assetid="6822034455"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYznarJJjkQ6ovjw4SPlfP3auqEl2oBuJB1j--WoY322QziqkdpZGr3IteLMlhpw4RJCv8"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Gamma Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6819849590" data-points="3" data-extra="0" data-assetid="6819849590"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYxnaeQImRGu4S1x9TawfSmY-iHkmoD7cEl2LiQpIjz3wPl_ERkYWHwLY-LMlhp9pkR_UQ"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Operation Wildfire Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6819477388" data-points="3" data-extra="0" data-assetid="6819477388"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYynaSdJGhE74y0wNWIw_OlNuvXkDpSuZQmi--SrN-h3gey-Uo6YWmlIoCLMlhplhFFvwI"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma 3 Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6793100741" data-points="3" data-extra="0" data-assetid="6793100741"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYynaSdJGhE74y0wNWIw_OlNuvXkDpSuZQmi--SrN-h3gey-Uo6YWmlIoCLMlhplhFFvwI"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma 3 Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6775583404" data-points="3" data-extra="0" data-assetid="6775583404"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYynaSdJGhE74y0wNWIw_OlNuvXkDpSuZQmi--SrN-h3gey-Uo6YWmlIoCLMlhplhFFvwI"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma 3 Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6775235169" data-points="3" data-extra="0" data-assetid="6775235169"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYynaSdJGhE74y0wNWIw_OlNuvXkDpSuZQmi--SrN-h3gey-Uo6YWmlIoCLMlhplhFFvwI"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma 3 Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6772808353" data-points="3" data-extra="0" data-assetid="6772808353"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYxnaeQImRGu4S1x9TawfSmY-iHkmoD7cEl2LiQpIjz3wPl_ERkYWHwLY-LMlhp9pkR_UQ"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Operation Wildfire Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6768830185" data-points="3" data-extra="0" data-assetid="6768830185"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FF4u1qubIW4Su4mzxYHbzqGtZ-KGlz8EuJcg3rnE9NiijVe3_UY-Zzr2JJjVLFEEeiQRtg"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Shadow Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6767730704" data-points="3" data-extra="0" data-assetid="6767730704"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYynaSdJGhE74y0wNWIw_OlNuvXkDpSuZQmi--SrN-h3gey-Uo6YWmlIoCLMlhplhFFvwI"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma 3 Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6707492928" data-points="3" data-extra="0" data-assetid="6707492928"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYynaSdJGhE74y0wNWIw_OlNuvXkDpSuZQmi--SrN-h3gey-Uo6YWmlIoCLMlhplhFFvwI"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma 3 Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6684963736" data-points="3" data-extra="0" data-assetid="6684963736"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FF8ugPDMIWpAuIq1w4KIlaChZOyFwzgJuZNy3-2T89T0jlC2rhZla2vwIJjVLFHz75yKpg"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Falchion Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6672967845" data-points="3" data-extra="0" data-assetid="6672967845"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYynaSdJGhE74y0wNWIw_OlNuvXkDpSuZQmi--SrN-h3gey-Uo6YWmlIoCLMlhplhFFvwI"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Chroma 3 Case</li>
+                                                </ul>
+                                            </li>
+                                            <li id="item_6556596100" data-points="3" data-extra="0" data-assetid="6556596100"
+                                                onclick="selectItem(this)" class="weapon_box inventory_weapon_box">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p>3</p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                        <img class="img-responsive" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYxnaeQImRGu4S1x9TawfSmY-iHkmoD7cEl2LiQpIjz3wPl_ERkYWHwLY-LMlhp9pkR_UQ"
+                                                            alt="">
+                                                    </li>
+                                                    <li class="inventory_weapon_name" style="color:#">Operation Wildfire Case</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!-- /weapon_list -->
+                                    </div>
+                                </div>
+                                <!-- /left box-->
+                                <div class="deposit_box pull-left">
+                                    <div class="deposit_box_inner">
+                                        <div class="inventroy_title_box">
+                                            <ul class="skin-info clearfix">
+                                                <li>Selected Items:
+                                                    <span id="deposit_count" class="text-gold">0</span>
+                                                </li>
+                                                <li>Value:
+                                                    <i class="icon iconfont icon-vp text-i"></i>&nbsp;
+                                                    <span class="text-gold" id="value_points">0</span>
+                                                </li>
+                                            </ul>
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-primary send_offer_btn" id="send_offer_btn">Send Trade Offer</button>
+                                            </div>
+                                        </div>
+                                        <ul class="clearfix deposit_items deposit_items_l" id="deposit_items">
+                                            <li class="weapon_box inventory_weapon_box empty">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p></p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                    </li>
+
+                                                    <li class="inventory_weapon_name"></li>
+                                                </ul>
+                                            </li>
+                                            <li class="weapon_box inventory_weapon_box empty">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p></p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                    </li>
+
+                                                    <li class="inventory_weapon_name"></li>
+                                                </ul>
+                                            </li>
+                                            <li class="weapon_box inventory_weapon_box empty">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p></p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                    </li>
+
+                                                    <li class="inventory_weapon_name"></li>
+                                                </ul>
+                                            </li>
+                                            <li class="weapon_box inventory_weapon_box empty">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p></p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                    </li>
+
+                                                    <li class="inventory_weapon_name"></li>
+                                                </ul>
+                                            </li>
+                                            <li class="weapon_box inventory_weapon_box empty">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p></p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                    </li>
+
+                                                    <li class="inventory_weapon_name"></li>
+                                                </ul>
+                                            </li>
+                                            <li class="weapon_box inventory_weapon_box empty">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p></p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                    </li>
+
+                                                    <li class="inventory_weapon_name"></li>
+                                                </ul>
+                                            </li>
+                                            <li class="weapon_box inventory_weapon_box empty">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p></p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                    </li>
+
+                                                    <li class="inventory_weapon_name"></li>
+                                                </ul>
+                                            </li>
+                                            <li class="weapon_box inventory_weapon_box empty">
+                                                <ul>
+                                                    <li class="weapon_points">
+                                                        <p></p>
+                                                    </li>
+                                                    <li class="weapon_img">
+                                                    </li>
+
+                                                    <li class="inventory_weapon_name"></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!-- /weapon_list -->
+                                    </div>
+                                </div>
+                                <!-- cl -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./footer.html')
+        </div>
+    </main>
+
+    <div class="modal topup-modal fade" id="processing" tabindex="-1" role="alert"  aria-hidden="false">
+        <div class="modal-dialog" style="width: 250px; text-align: center; margin-top: 20%;">
+          <p class="processing-box">
+             <div class="loading"></div>
+             <div style="color: #fff">Loading</div>
+          </p>
+        </div><!-- /.modal -->
+     </div>
+     
+     <div class="modal topup-modal deposit-confirm fade" id="confirm_box" tabindex="-1" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+           <div class="modal-content congratulate_dialog">
+              <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                 </button>
+                 <h4 class="modal-title" id="myModalLabel">
+                    DEPOSIT CONFIRM
+                 </h4>
+              </div>
+              <div class="modal-body clearfix">
+                 <div class="modal-tip">
+                     <i class="icon iconfont icon-tip"></i>
+                     <p>You will receive the points once you accept the trade offer ( You MUST accept the offer in 5 mins )</p>
+                     <p>We only accept skins via our site directly. There is no live trade or any other trade methods!</p>
+                 </div>
+                 <div class="form-group">
+                     <label for="trade_link">Trade URL - <a href="https://steamcommunity.com/profiles/tradeoffers/privacy#trade_offer_access_url" target="_blank">Find my trade url</a></label>
+                     <input class="form-control input-inverse" type="text" value="" name="trade_link" id="trade_link" placeholder="Enter Trade URL">
+                 </div>
+     
+                 <div class="form-group">
+                     <label for="fixed_code">Fixed Code</label>
+                     <select class="form-control input-inverse" id="fixed_code" name="fixed_code" onchange="selectVoucher(this);">
+                         <option value="">Select Your Voucher</option>
+                             <option value="<?php echo $vc->coupon->code">6522</option>
+                     </select>
+                     <div class="mce_inline_error" id="fixed_code_msg" style="color:red;"></div>
+                 </div>
+
+                 <div class="form-group">
+                     <label for="percent_code">Percent Code</label>
+                     <select class="form-control input-inverse" id="percent_code" name="percent_code" onchange="selectVoucher(this);">
+                         <option value="">Select Your Voucher</option>
+                             <option value="<?php echo $vc->coupon->code"></option>32626</option>
+                     </select>
+                     <div class="mce_inline_error" id="percent_code_msg" style="color:red;"></div>
+                 </div>
+                 <div class="form-group" id="use_vcode_tr" style="display: none;">
+                     <div class="text-right" style="color:#fff;">
+                        (<span id="vcodexs"></span>):
+                         <i class="icon iconfont icon-vp"></i> <span id="pay_add_points"></span>
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <div class="text-right" style="color:#fff;">
+                         <i class="icon iconfont icon-vp"></i> <span id="xx_total_points"></span>
+                     </div>
+                 </div>
+                 <input type="hidden" value="" id="redeem_code" />
+                 <button type="button" class="btn btn-primary pull-right" id="deposit_confirm" data-sid="">
+                    Comfirm
+                 </button>
+              </div>
+           </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+     </div><!-- /.modal -->
+
+    @@include('./foot.html')
+    <script>
+        $('#confirm_box').modal();
+    </script>
+</body>
+
+</html>

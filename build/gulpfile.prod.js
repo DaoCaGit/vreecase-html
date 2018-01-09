@@ -105,12 +105,17 @@ function prod() {
      * 图片处理 
      */
     gulp.task('images', function () {
-        return gulp.src(Config.img.src).pipe(imagemin({
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        })).pipe(gulp.dest(Config.img.dist));
+        return gulp.src(Config.img.src)
+        .pipe(gulp.dest(Config.img.dist));
     });
+
+    // gulp.task('images', function () {
+    //     return gulp.src(Config.img.src).pipe(imagemin({
+    //         optimizationLevel: 3,
+    //         progressive: true,
+    //         interlaced: true
+    //     })).pipe(gulp.dest(Config.img.dist));
+    // });
 
     /**
      * 字体处理

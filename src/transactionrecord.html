@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})
+
+        <div class="content-wrap">
+
+            @@include('./header.html') @@include('./navbar.html')
+
+            <div class="user-center-wrap clearfix">
+
+                @@include('./sidebar.html', {"active": "transactionrecord"})
+
+                <div class="ucenter-content">
+                    <div class="panel panel-ucenter">
+                        <div class="panel-heading">
+                            Transaction Process Record
+
+                            <ul class="game-tabs pull-right">
+                                <li role="presentation" class="active">
+                                    <a href="###" aria-controls="csgo">
+                                        <i class="icon iconfont icon-csgo"></i><span>CS:GO</span> </a>
+                                </li>
+                                <li role="presentation" class="">
+                                    <a href="###" aria-controls="csgo">
+                                        <i class="icon iconfont icon-pubg"></i><span>PUBG</span> </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-body clearfix">
+                            <div class="transactionrecord">
+                                <form class="form-inline form-filter">
+                                    <div class="form-group">
+                                        <input type="datetime" id="start-time" class="form-control datetime" data-date-format="yyyy-mm-dd" style="cursor: pointer"
+                                            readonly="readonly">
+                                    </div>
+                                    <span style="font-size: 14px; color: #89b6fa;">To</span>
+                                    <div class="form-group">
+                                        <input type="datetime" id="end-time" class="form-control datetime" data-date-format="yyyy-mm-dd" style="cursor: pointer"
+                                            readonly="readonly">
+                                    </div>
+                                    <button type="submit" class="btn btn-search">Search</button>
+                                </form>
+
+                                <table class="table table-custom">
+                                    <thead>
+                                        <tr>
+                                            <th width="5%">No.</th>
+                                            <th width="12%">SERIES</th>
+                                            <th>Skin Name</th>
+                                            <th width="20%">Skin Image</th>
+                                            <th width="20%">Date</th>
+                                            <th width="8%">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>CS:GO</td>
+                                            <td>Tec-9 | Army Mesh (Minimal Wear)</td>
+                                            <td>
+                                                <img style="width:60px;" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoor-mcjhzw8zFdC5K092kmZm0m_7zO6-flDkFuJFz3OjApY-ijQXh80c6Nmv1LYfGJFNsMF_Qrlm8wr-505O6voOJlyUZNPPaxw">
+                                            </td>
+                                            <td>2017-09-26 10:55</td>
+                                            <td class="color-success">Successful</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>CS:GO</td>
+                                            <td>MP9 | Sand Dashed (Battle-Scarred)</td>
+                                            <td>
+                                                <img style="width:60px;" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FBRw7OfJYTh9_9S5hpS0hPb6N4TZk2pH8Yt12r2XrImt3FXnqRdpMjv7LYKRewBvZVCD-QO3lejngpK16pTImCFlpGB8shsy0D21">
+                                            </td>
+                                            <td>2017-09-20 15:52</td>
+                                            <td class="color-failure">failed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>CS:GO</td>
+                                            <td>P250 | Metallic DDPAT (Factory New)</td>
+                                            <td>
+                                                <img style="width:60px;" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhh3szdYz9D4uO6nYeDg7mmNe3UkD8GsMEo3erDp9St31K3_0JsZTqlLI-SdA5oZwuDqQW2lLrpm9bi6_KhRAkC">
+                                            </td>
+                                            <td>2017-09-20 11:45</td>
+                                            <td class="color-failure">failed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>CS:GO</td>
+                                            <td>Tec-9 | Army Mesh (Minimal Wear)</td>
+                                            <td>
+                                                <img style="width:60px;" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoor-mcjhzw8zFdC5K092kmZm0m_7zO6-flDkFuJFz3OjApY-ijQXh80c6Nmv1LYfGJFNsMF_Qrlm8wr-505O6voOJlyUZNPPaxw">
+                                            </td>
+                                            <td>2017-09-26 10:55</td>
+                                            <td class="color-success">Successful</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>CS:GO</td>
+                                            <td>MP9 | Sand Dashed (Battle-Scarred)</td>
+                                            <td>
+                                                <img style="width:60px;" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FBRw7OfJYTh9_9S5hpS0hPb6N4TZk2pH8Yt12r2XrImt3FXnqRdpMjv7LYKRewBvZVCD-QO3lejngpK16pTImCFlpGB8shsy0D21">
+                                            </td>
+                                            <td>2017-09-20 15:52</td>
+                                            <td class="color-failure">failed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>CS:GO</td>
+                                            <td>P250 | Metallic DDPAT (Factory New)</td>
+                                            <td>
+                                                <img style="width:60px;" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhh3szdYz9D4uO6nYeDg7mmNe3UkD8GsMEo3erDp9St31K3_0JsZTqlLI-SdA5oZwuDqQW2lLrpm9bi6_KhRAkC">
+                                            </td>
+                                            <td>2017-09-20 11:45</td>
+                                            <td class="color-failure">failed</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                @@include('./pagination.html')
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./footer.html')
+        </div>
+    </main>
+
+    @@include('./foot.html')
+    <script>
+        $("#start-time").datepicker({
+            minViewMode: 0,
+            orientation: "bottom auto",
+            clearBtn: true,
+            autoclose: true,
+            // startDate:'-184d'
+        });
+
+        $("#end-time").datepicker({
+            orientation: "bottom auto",
+            clearBtn: true,
+            autoclose: true,
+            // startDate:'-184d'
+        });
+    </script>
+</body>
+
+</html>

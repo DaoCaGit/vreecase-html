@@ -19,7 +19,7 @@
             <i class="icon iconfont icon-box"></i> Personal Inventory</a>
         <ul>
             <li>
-                <a href="###">Items Inventory</a>
+                <a class="@@if(active == "inventory"){active}" href="./inventory.html">Items Inventory</a>
             </li>
             <li>
                 <a class="@@if(active == "debrisBag"){active}" href="./debris-bag.html">Debris Bag</a>
@@ -28,15 +28,14 @@
                 <a href="###">My Voucher</a>
             </li>
             <li>
-                <a href="###">Transaction Record</a>
+                <a class="@@if(active == "transactionrecord"){active}" href="transactionrecord.html">Transaction Record</a>
             </li>
             <li>
-                <a href="###">Items had been sold</a>
+                <a class="@@if(active == "sold"){active}" href="sold-history.html">Items had been sold</a>
             </li>
         </ul>
     </li>
     <li class="sidebarview">
-        <a href="###" class="link">
-            <i class="icon iconfont icon-referralFriends"></i> Share To Friends</a>
+        <a href="./share-to-friends.html" class="link"><i class="icon iconfont icon-referralFriends"></i> Share To Friends</a>
     </li>
 </div>

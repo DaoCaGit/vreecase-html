@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})
+
+        <div class="content-wrap">
+
+            @@include('./header.html') @@include('./navbar.html')
+
+            <div class="user-center-wrap clearfix">
+
+                @@include('./sidebar.html', {"active": "sharetofriends"})
+
+                <div class="ucenter-content">
+                    <div class="panel panel-ucenter">
+                        <div class="panel-heading">Share To Friends</div>
+                        <div class="panel-body clearfix">
+                            <div class="referral-friends">
+                                <div class="describe">
+                                    <div class="title">How dose it work?</div>
+                                    <p>1. Promote your referral link to your social media</p>
+                                    <p>2. Anyone comes from your link to vreecase.com and successfully sign up will be considered
+                                        as a referral.</p>
+                                    <p>3. 3 referrals can get a free case for you.</p>
+                                    <p>4. Only one chance to get the free case</p>
+                                </div>
+
+                                <div class="account-info clearfix">
+                                    <img class="avatar" src="images/avatar_default.png" alt="">
+                                    <form class="form-horizontal account-profile-form clearfix">
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="control-label">Account</label>
+                                            <div class="pull-left">
+                                                <span class="control-text">dayday1024@sina.com</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">Steam Name</label>
+                                            <div class="pull-left">
+                                                <span class="control-text">DDy</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">Share</label>
+                                            <div class="pull-left">
+                                                <span class="control-text">
+                                                    <a href="###" style="text-decoration: underline;">https://www.vreecase.com/?code=zechIZ</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">To</label>
+                                            <div class="pull-left social">
+                                                <div style=" position: absolute;">
+                                                    <a href="javascript:;" class="social-link" onclick="toShare('https://www.facebook.com/sharer/sharer.php', 'u', 't');"></a>
+                                                    <a href="javascript:;" class="social-link" onclick="toShare('https://www.whatsapp.com/', '&amp;mini=true&amp;url', 'title');"></a>
+                                                    <a href="javascript:;" class="social-link" onclick="toShare('https://twitter.com/intent/tweet', 'source', 'text', 'twitter');"></a>
+                                                    <a href="javascript:;" class="social-link" onclick="toShare('https://reddit.com/submit', 'url', 'title');"></a>
+                                                    <a href="javascript:;" class="social-link" onclick="toShare('https://plus.google.com/share', 'url', 't');"></a>
+                                                    <a href="javascript:;" class="social-link" onclick="toShare('http://www.tumblr.com/share', 'u', 't');"></a>
+                                                    <a href="javascript:;" class="social-link" onclick="toShare('https://vk.com/share.php', 'url', 't');"></a>
+                                                    <a href="javascript:;" class="social-link" onclick="toShare('', '', '', 'mail');"></a>
+                                                </div>
+                                                <img src="./images/social.png" alt="">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-getcase">Get Free Case</button>
+                                    </form>
+                                </div>
+
+                                <table class="table table-friends table-custom">
+                                    <thead>
+                                        <tr>
+                                            <th width="20%" >NO.</th>
+                                            <th width="50%">Successfully Account</th>
+                                            <th width="30%">time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>dayday1024@sina.com</td>
+                                            <td>2017-08-09 10:44</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>dayday1024@sina.com</td>
+                                            <td>2017-08-09 10:44</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>dayday1024@sina.com</td>
+                                            <td>2017-08-09 10:44</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>dayday1024@sina.com</td>
+                                            <td>2017-08-09 10:44</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>dayday1024@sina.com</td>
+                                            <td>2017-08-09 10:44</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>dayday1024@sina.com</td>
+                                            <td>2017-08-09 10:44</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./footer.html')
+        </div>
+    </main>
+
+    <div class="modal fade topup-modal" tabindex="-1" role="dialog" id="topupModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">TOP UP WITH VP</h4>
+                </div>
+                <div class="modal-body clearfix modal-body-effect">
+                    <div class="deposit-select clearfix">
+                        <div class="deposit-case">
+                            <div class="pay-by-cash">
+                                <img src="images/case.png" alt="case">
+                            </div>
+                            <a type="button" class="btn" href="/transaction/cash">Pay By Cash</a>
+                        </div>
+                        <div class="deposit-skin">
+                            <div class="pay-by-steam-skins">
+                                <img src="images/skin.png" alt="skin">
+                            </div>
+                            <a type="button" class="btn" href="/transaction/skins">Pay By Steam Skins</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
+    @@include('./foot.html')
+</body>
+
+</html>

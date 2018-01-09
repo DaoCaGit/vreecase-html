@@ -16,7 +16,7 @@
             @@include('./navbar.html')
 
             <div class="user-center-wrap clearfix">
-
+                @@include('./breadcrumb.html')
                 @@include('./sidebar.html', {"active": "accountInfo"})
 
                 <div class="ucenter-content">
@@ -67,7 +67,9 @@
                                     </div>
                                 </form>
                             </div>
-                            <img class="banner-account-Info" src="images/banner-accountInfo.jpg" alt="">
+                            <div class="banner-account-Info">
+                                <img src="images/banner-accountInfo.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -77,13 +79,13 @@
         </div>
     </main>
 
-    <div class="modal fade topup-modal" tabindex="-1" role="dialog" id="topupModal">
+    <div class="modal fade topup-modal withVP-modal" tabindex="-1" role="dialog" id="topupModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                    </button>
+                    </button> 
                     <h4 class="modal-title">TOP UP WITH VP</h4>
                 </div>
                 <div class="modal-body clearfix modal-body-effect">

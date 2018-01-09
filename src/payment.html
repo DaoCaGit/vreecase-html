@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})
+
+        <div class="content-wrap">
+
+            @@include('./header.html') @@include('./navbar.html')
+
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="home">
+                        <a href="/">
+                            <i class="icon iconfont icon-home"></i> Home</a>
+                    </li>
+                    <li class="active">Transaction</li>
+                    <li class="active">Payment</li>
+                </ol>
+            </div>
+
+            <div class="container">
+                <form id="main_form" action="/default/order/createorderdj" method="post">
+                    <div class="payment clearfix">
+                        <!-- payment-content start -->
+                        <div class="payment-content hidden-xs">
+                            <h2 class="text-post">Payment Method</h2>
+                            <ul class="payment-list clearfix">
+                                <li>
+                                    <label for="payment_1">
+                                        <input type="radio" name="payment" id="payment_1" value="skrill" checked="checked">
+                                        <img src="https://www.vreecase.com/csgo/upload/default/1505295473622617645.jpg" alt="Skrill">
+                                        <br>
+                                        <span>Skrill </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="payment_27">
+                                        <input type="radio" name="payment" id="payment_27" value="paymentwall_cc">
+                                        <img src="https://www.vreecase.com/csgo/upload/default/1503474818616423454.png" alt="Credit Card">
+                                        <br>
+                                        <span>Credit Card </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="payment_7">
+                                        <input type="radio" name="payment" id="payment_7" value="paysafecard" data-tax="0.07">
+                                        <img src="https://www.vreecase.com/csgo/upload/default/1501745045775220723.jpg" alt="PaySafeCard">
+                                        <br>
+                                        <span>PaySafeCard (+ 7 %Fee )
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="payment_13">
+                                        <input type="radio" name="payment" id="payment_13" value="IDL">
+                                        <img src="https://www.vreecase.com/csgo/upload/default/1501745650872771168.jpg" alt="iDEAL">
+                                        <br>
+                                        <span>iDEAL </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="neosurf">
+                                        <input type="radio" name="payment" id="neosurf" value="paymentwall_neosurf" data-tax="0.10">
+                                        <div class="bg_payment">
+                                            <img src="http://api.paymentwall.com/images/ps_logos/pm_neosurf.png" alt="NeoSurf">
+                                        </div>
+                                        <span>NeoSurf( +10.00% )</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="alipay">
+                                        <input type="radio" name="payment" id="alipay" value="paymentwall_alipay" data-tax="0.02">
+                                        <div class="bg_payment">
+                                            <img src="http://api.paymentwall.com/images/ps_logos/pm_alipay.png" alt="Alipay">
+                                        </div>
+                                        <span>Alipay( +2.00% )</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="unionpay">
+                                        <input type="radio" name="payment" id="unionpay" value="paymentwall_unionpay" data-tax="0.02">
+                                        <div class="bg_payment">
+                                            <img src="http://api.paymentwall.com/images/ps_logos/pm_unionpay.png" alt="UnionPay">
+                                        </div>
+                                        <span>UnionPay( +2.00% )</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="mint">
+                                        <input type="radio" name="payment" id="mint" value="paymentwall_mint" data-tax="0.11">
+                                        <div class="bg_payment">
+                                            <img src="http://api.paymentwall.com/images/ps_logos/pm_mint.png" alt="MINT">
+                                        </div>
+                                        <span>MINT( +11.00% )</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="wechatpayments">
+                                        <input type="radio" name="payment" id="wechatpayments" value="paymentwall_wechatpayments">
+                                        <div class="bg_payment">
+                                            <img src="http://api.paymentwall.com/images/ps_logos/pm_wechatpayments.png" alt="WeChat Pay">
+                                        </div>
+                                        <span>WeChat Pay</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="payment_11">
+                                        <input type="radio" name="payment" id="payment_11" value="GLU">
+                                        <img src="https://www.vreecase.com/csgo/upload/default/1501745359458988315.jpg" alt="Trustly (GluePay)">
+                                        <br>
+                                        <span>Trustly (GluePay) </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="payment_15">
+                                        <input type="radio" name="payment" id="payment_15" value="OBT">
+                                        <img src="https://www.vreecase.com/csgo/upload/default/1501746298991494591.jpg" alt="Rapid Transfer">
+                                        <br>
+                                        <span>Rapid Transfer </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="payment_9">
+                                        <input type="radio" name="payment" id="payment_9" value="SFT">
+                                        <img src="https://www.vreecase.com/csgo/upload/default/1501745131330988068.jpg" alt="SOFORT Banking">
+                                        <br>
+                                        <span>SOFORT Banking </span>
+                                    </label>
+                                </li>
+
+                            </ul>
+
+                            <div class="panel panel-default panel-payment">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" title="More Payment Options" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Local Payments
+                                            <span class="up"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <ul class="payment-list clearfix">
+                                            <li>
+                                                <label for="payment_25">
+                                                    <input type="radio" name="payment" id="payment_25" value="PWY20">
+                                                    <img src="https://www.vreecase.com/csgo/upload/default/1501746781652518278.jpg" alt="PWY20">
+                                                    <br>
+                                                    <span>przelewy24 </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="payment_21">
+                                                    <input type="radio" name="payment" id="payment_21" value="GIR">
+                                                    <img src="https://www.vreecase.com/csgo/upload/default/1501746686259339071.jpg" alt="GIR">
+                                                    <br>
+                                                    <span>Giropay </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="payment_17">
+                                                    <input type="radio" name="payment" id="payment_17" value="PLI">
+                                                    <img src="https://www.vreecase.com/csgo/upload/default/1501746520075143465.jpg" alt="PLI">
+                                                    <br>
+                                                    <span>Poli </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="payment_19">
+                                                    <input type="radio" name="payment" id="payment_19" value="PSP">
+                                                    <img src="https://www.vreecase.com/csgo/upload/default/1501746640204780433.jpg" alt="PSP">
+                                                    <br>
+                                                    <span>PostePay </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="payment_23">
+                                                    <input type="radio" name="payment" id="payment_23" value="NPY">
+                                                    <img src="https://www.vreecase.com/csgo/upload/default/1501746736586925486.jpg" alt="NPY">
+                                                    <br>
+                                                    <span>EPS(NetPay) </span>
+                                                </label>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- payment-content end -->
+
+                        <!-- payment-slide start -->
+                        <div class="payment-slide">
+                            <ul class="accounting">
+                                <li>
+                                    <h3>Contact Email *</h3>
+                                    <span class="uemail">Hi, 1135629718</span>
+                                </li>
+
+                                <li class="visible-xs">
+                                    <h3>payment method</h3>
+                                    <select class="form-control input-lg pay_sel_box" name="payment_mobile">
+                                        <option value="skrill" selected="selected">
+                                            Skrill </option>
+                                        <option value="paymentwall_cc">
+                                            Credit Card </option>
+                                        <option value="paysafecard" data-tax="0.07">
+                                            PaySafeCard (+ 7 %Fee )
+                                        </option>
+                                        <option value="IDL">
+                                            iDEAL </option>
+                                        <option value="GLU">
+                                            Trustly (GluePay) </option>
+                                        <option value="OBT">
+                                            Rapid Transfer </option>
+                                        <option value="SFT">
+                                            SOFORT Banking </option>
+                                        <option value="PWY20">
+                                            przelewy24 </option>
+                                        <option value="GIR">
+                                            Giropay </option>
+                                        <option value="PLI">
+                                            Poli </option>
+                                        <option value="PSP">
+                                            PostePay </option>
+                                        <option value="NPY">
+                                            EPS(NetPay) </option>
+                                    </select>
+                                </li>
+
+                                <!--<li>
+                                <h3>Coupon Code</h3>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <span class="input-group-btn">
+                                      <button class="btn btn-default" type="button">Submit</button>
+                                    </span>
+                                </div>
+                             </li>-->
+
+
+
+                                <li class="checkout">
+                                    <h3>Order Information</h3>
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr id="use_vcode_tr" style="display:none;">
+                                                <th>My Voucher(
+                                                    <span id="vcodexs"></span>)</th>
+                                                <td>
+                                                    <i class="icon iconfont icon-vp"></i>
+                                                    <span id="pay_add_points" style="color:green"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="217">Total points</th>
+                                                <td>
+                                                    <i class="icon iconfont icon-vp"></i>
+                                                    <span id="xx_total_points">2,000</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Price</th>
+                                                <td>
+                                                    <span class="text-blod price" id="order_amount">$20.00</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <input name="voucher_code" id="s_voucher_code" value="" type="hidden">
+                                    <button id="submit_form" type="button" class="btn btn-default btn-block" data-paypal-click-listener="">CHECK OUT</button>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <input type="hidden" name="order_mail" value="">
+                        <input type="hidden" name="firstname" value="">
+                        <input type="hidden" name="lastname" value="">
+                        <input type="hidden" name="country" value="">
+
+                        <input type="hidden" id="payment_method" name="payment_method" value="skrill">
+                        <!-- payment-slide end -->
+                    </div>
+                </form>
+            </div>
+
+            @@include('./footer.html')
+
+        </div>
+    </main>
+
+
+    @@include('./foot.html')
+    <script>
+        $('.panel-payment').on('click', 'a', function () {
+            $('.panel-payment .panel-heading').find('span').toggleClass('down');
+        });
+    </script>
+</body>
+
+</html>

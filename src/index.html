@@ -410,7 +410,7 @@
                                 <span class="time">720 : 28 : 36</span>
                             </div>
                         </a>
-                                                <a href="###" class="weapon-case-item">
+                        <a href="###" class="weapon-case-item">
                             <img class="case-img" src="../images/dev/sz.png" alt="">
                             <img class="case-breath-light" src="../images/dev/sz.png" alt="">
                             <div class="case-title">
@@ -458,12 +458,62 @@
             </div>
 
             @@include('./footer.html')
-
         </div>
     </main>
 
+    <div class="modal fade topup-modal" id="daily-modal" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="">&nbsp;</h4>
+                </div>
+                <div class="modal-body clearfix modal-body-effect">
+                    <div class="daily-modal-title text-center" role="tablist">
+                        <div class="title-inner">
+                            <i class="icon iconfont icon-diamond"></i>&nbsp;
+                            <span>Daily Free</span>
+                        </div>
+                        <div class="contents">
+                            Daily free bonus will be available for every 24 hours if you add
+                            <span style="color:#FF9900;">vreecase.com</span> to your
+                            <a href="https://steamcommunity.com/id/me/edit" target="_blank">
+                                <span style="text-decoration: underline"> steam name </span>
+                            </a>. </div>
+                        <div id="re_msg" class="">
+
+                            <div class="card-btn-group clearfix btn" id="daily-btn">
+                                <div class="co">
+                                    <span>Claim the award
+                                        <i class="icon iconfont icon-vp"></i> 3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="daily-voucher-div" style="display:none;">
+                            <div class="card-btn-group clearfix btn" id="daily-voucher-btn">
+                                <div class="co">
+                                    <span>Claim Free Case</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @@include('./foot.html')
+    <script>
+        $(document).ready(function () {
+            Unit.ui.realTimeCount(11555480, 336);
+
+            $('#daily_free_li').bind('click', function(){
+                $('#daily-modal').modal();
+            })
+        });
+    </script>
 </body>
 
 </html>

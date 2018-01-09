@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})
+
+        <div class="content-wrap">
+
+            @@include('./header.html') @@include('./navbar.html')
+
+            <div class="user-center-wrap clearfix">
+                @@include('./breadcrumb.html')
+                @@include('./sidebar.html', {"active": "inventory"})
+
+                <div class="ucenter-content">
+                    <div class="panel panel-ucenter">
+                        <div class="panel-heading">Account Info</div>
+                        <div class="panel-body clearfix">
+                            <div class="inventory">
+                                <div class="inventory-fileter">
+                                    <form class="form-inline form-inventory" action="/customers/inventory/items" method="post">
+                                        <div class="form-group">
+                                            <select class="form-control select-inverse" name="status">
+                                                <option value="0">Available</option>
+                                                <option value="1">Accepted</option>
+                                                <option value="2">Processing</option>
+                                                <option value="3">Sold</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group input-search">
+                                                <span class="input-group-addon" id="keywords-addon">
+                                                    <i class="icon iconfont icon-search"></i>
+                                                </span>
+                                                <input type="text" name="keyword" id="keyword" class="form-control search" placeholder="Search" aria-describedby="keywords-addon">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button type="button" id="search" class="btn btn-search">Search</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="box-tips">
+                                    Steam of the site associated with items inventory
+                                </div>
+
+                                <div class="inventory-action clearfix">
+                                    <div class="checkbox-a checkall pull-left">
+                                        <input type="checkbox" value="all" id="checkall" name="checkall">
+                                        <label for="checkall">
+                                            <span>ALL</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="pull-right">
+                                        <button class="btn btn-sell" data-toggle="modal" data-target="#recycling_modal">SELL</button>
+                                        <button class="btn btn-send" data-toggle="modal" data-target="#withdraw_modal">SEND</button>
+                                        <button class="btn btn-contract">CONTRACT</button>
+                                    </div>
+                                </div>
+
+                                <ul class="skins-list clearfix hide">
+                                    <span class="loading"></span>
+                                </ul>
+
+                                <ul class="skins-list clearfix">
+                                    <li class="skin-item selected">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPv2.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #EB4B4B">
+                                            ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                        </span>
+                                    </li>
+                                    <li class="skin-item item-available">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPJL.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #D32CE6">
+                                            CLASSIFIED
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPv2.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #5E98D9">
+                                            ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPJL.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #4B69FF">
+                                            CLASSIFIED
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <diiv class="skin-img">
+                                            <img src="./images/dev/AWPv2.png" alt="">
+                                        </diiv>
+                                        <span class="skin-name" style="color: #B0C3D9">
+                                            ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPv2.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #EB4B4B">
+                                            ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPJL.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #D32CE6">
+                                            CLASSIFIED
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPv2.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #5E98D9">
+                                            ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPJL.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #4B69FF">
+                                            CLASSIFIED
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <diiv class="skin-img">
+                                            <img src="./images/dev/AWPv2.png" alt="">
+                                        </diiv>
+                                        <span class="skin-name" style="color: #B0C3D9">
+                                            ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <img class="skin-img" src="./images/dev/AWPJL.png" alt="">
+                                        <span class="skin-name" style="color: #4B69FF">
+                                            CLASSIFIED
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPv2.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #EB4B4B">
+                                            ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPJL.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #D32CE6">
+                                            CLASSIFIED
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPv2.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #5E98D9">
+                                            ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <div class="skin-img">
+                                            <img src="./images/dev/AWPJL.png" alt="">
+                                        </div>
+                                        <span class="skin-name" style="color: #4B69FF">
+                                            CLASSIFIED
+                                        </span>
+                                    </li>
+                                    <li class="skin-item">
+                                        <diiv class="skin-img">
+                                            <img src="./images/dev/AWPv2.png" alt="">
+                                        </diiv>
+                                        <span class="skin-name" style="color: #B0C3D9">
+                                            ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                        </span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./footer.html')
+        </div>
+    </main>
+
+    <div class="modal fade topup-modal modal-recycling" id="recycling_modal" role="dialog" aria-labelledby="recyclingModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Selling Items For Points</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <div class="app-tips text-gold">
+                        <i class="icon iconfont icon-notice"></i> Notice: Items can not be recovered once they are sold!
+                    </div>
+                    <div class="scroll" style="height: 420px;">
+                        <ul class="skins-list clearfix">
+                            <li class="skin-item selected">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPv2.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #EB4B4B">
+                                    ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPJL.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #D32CE6">
+                                    CLASSIFIED
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPv2.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #5E98D9">
+                                    ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPJL.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #4B69FF">
+                                    CLASSIFIED
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <diiv class="skin-img">
+                                    <img src="./images/dev/AWPv2.png" alt="">
+                                </diiv>
+                                <span class="skin-name" style="color: #B0C3D9">
+                                    ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPv2.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #EB4B4B">
+                                    ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPJL.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #D32CE6">
+                                    CLASSIFIED
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPv2.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #5E98D9">
+                                    ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPJL.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #4B69FF">
+                                    CLASSIFIED
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <diiv class="skin-img">
+                                    <img src="./images/dev/AWPv2.png" alt="">
+                                </diiv>
+                                <span class="skin-name" style="color: #B0C3D9">
+                                    ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <img class="skin-img" src="./images/dev/AWPJL.png" alt="">
+                                <span class="skin-name" style="color: #4B69FF">
+                                    CLASSIFIED
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPv2.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #EB4B4B">
+                                    ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPJL.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #D32CE6">
+                                    CLASSIFIED
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPv2.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #5E98D9">
+                                    ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <div class="skin-img">
+                                    <img src="./images/dev/AWPJL.png" alt="">
+                                </div>
+                                <span class="skin-name" style="color: #4B69FF">
+                                    CLASSIFIED
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                            <li class="skin-item">
+                                <diiv class="skin-img">
+                                    <img src="./images/dev/AWPv2.png" alt="">
+                                </diiv>
+                                <span class="skin-name" style="color: #B0C3D9">
+                                    ★ StatTrak Butterfly Knife | Case Hardened (Battle-Scarred)
+                                </span>
+                                <a href="javascript: void(0)" class="remove">
+                                    <i class="icon iconfont icon-remove"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="text-right recl-confirm">
+                        <p>Value:
+                            <span class="text-gold">
+                                <i class="icon iconfont icon-vp"></i>
+                                <sapn id="points">539</sapn>
+                            </span>
+                        </p>
+                        <button class="btn btn-primary" id="recl-confirm">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade topup-modal modal-withdraw" id="withdraw_modal" role="dialog" aria-labelledby="withdrawModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">TRANSACTION</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <ul class="table-title clearfix">
+                        <li class="no" style="width: 7%;">NO.</li>
+                        <li style="width: 10%">SERIES</li>
+                        <li style="width: 23%;">SKIN NAME</li>
+                        <li style="width: 15%;">SKIN IMAGE</li>
+                        <li style="width: 20%;">TRADING STATUS</li>
+                        <li style="width: 25%;">STATUS DESCRIPTION</li>
+                    </ul>
+                    <div class="scroll" style="max-height: 520px;">
+                        <div class="widthdraw-list">
+                            <div class="inner-table">
+                                <table class="table">
+                                    <tbody id="items_list">
+                                        <tr>
+                                            <td class="no" style="width: 7%;">1</td>
+                                            <td class="game" style="width: 10%;">CS:GO</td>
+                                            <td style="width: 23%;" class="item-name">P250 | Mehndi (Well-Worn)</td>
+                                            <td style="width: 15%;" class="image-display">
+                                                <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhjxszYI2gS086zkomFkvPLPr7Vn35c18lwmO7Eu9in3lDs-EtsYGHyIIPDdlc4YAzR-ge_xO_m0ZS0vcnBm3tgvCZxsSnD30vgPdeX2Ds">
+                                            </td>
+                                            <td style="width: 20%;" class="case-type trade_status" data-id="1747671">
+                                                <span class="notfount">Insufficient Inventory</span>
+                                            </td>
+                                            <td style="width: 25%;" class="redeem-time trade_msg">Out of stock. We are trying the best to restock it. Please try again later.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="no" style="width: 7%;">2</td>
+                                            <td class="game" style="width: 10%;">CS:GO</td>
+                                            <td style="width: 23%;" class="item-name">Galil AR | Orange DDPAT (Field-Tested)</td>
+                                            <td style="width: 15%;" class="image-display">
+                                                <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbupIgthwczAaAJG6My3gL-Ehfb6NL7um25V4dB8teXA54vwxlWxqkY6ZGDxLICcJg5vaFqG_wK4k-7pgpLpvZnLwSRruyRw5H2JyRGpwUYbBwHobOI">
+                                            </td>
+                                            <td style="width: 20%;" class="case-type trade_status" data-id="1935257">
+                                                <span class="notfount">Insufficient Inventory</span>
+                                            </td>
+                                            <td style="width: 25%;" class="redeem-time trade_msg">Out of stock. We are trying the best to restock it. Please try again later.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="no" style="width: 7%;">3</td>
+                                            <td class="game" style="width: 10%;">CS:GO</td>
+                                            <td style="width: 23%;" class="item-name">StatTrak™ SG 553 | Pulse (Well-Worn)</td>
+                                            <td style="width: 15%;" class="image-display">
+                                                <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopb3wflFf0Ob3YjoXuY-JhJWHhPLLPr7Vn35c18lwmO7Eu9Sh0Fbk_xE9Ym37LI7EJgY7Ml_ZqQK6lLi-18W76JybwXZluykqtnvD30vgXWzJUu8">
+                                            </td>
+                                            <td style="width: 20%;" class="case-type trade_status" data-id="1983107">
+                                                <span class="notfount">Insufficient Inventory</span>
+                                            </td>
+                                            <td style="width: 25%;" class="redeem-time trade_msg">Out of stock. We are trying the best to restock it. Please try again later.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade topup-modal modal-exchange in" id="exchange" role="dialog" aria-labelledby="exchangeModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">EXCHANGE</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <div class="exchange-content clearfix">
+                        <div class="exchange-content-l" id="original_skin" data-id="">
+                            <div class="content-l-inner bg-effect">
+                                <img class="original-skin-img" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotLO_JAlf0v73ZShQ_dO_h4W0n_b4Na_emG5u5Mx2gv3--Y3nj1H6rkBoNzr3dtfHcFA_NQnW_AO-xby7h8K_78ydm3diuSMrtirVnkOz1QYMMLJJTXlsBg"
+                                    alt="">
+                                <div class="name">StatTrak™ PP-Bizon | Cobalt Halftone (Minimal Wear)</div>
+                                <div class="points">
+                                    <i class="icon iconfont icon-vp"></i>&nbsp;
+                                    <span>39</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="exchange-content-m">
+                            <i class="icon iconfont icon-exchange"></i>
+                        </div>
+                        <div class="exchange-content-r scroll">
+                            <ul class="exchange-skins-list" id="exchange_skins">
+                                <li data-id="920447" class="exchange-skins-item bg-effect clearfix active">
+                                    <div class="exchange-skins-img">
+                                        <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbupIgthwczLZAJF7dC_mIGZqOf1Ia_YlWdU-_p9g-7J4cKt3wfmrUVoN2zwcNTGe1Q-Ml_T-Fe6wOjqgMK46pTAyHBn7ihxtCyOgVXp1nGGEdIU"
+                                            alt="">
+                                    </div>
+                                    <div class="name">Galil AR | Rocket Pop
+                                        <div class="points">
+                                            <i class="icon iconfont icon-vp"></i>&nbsp;34</div>
+                                    </div>
+                                </li>
+                                <li data-id="893169" class="exchange-skins-item bg-effect clearfix ">
+                                    <div class="exchange-skins-img">
+                                        <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRfwOP3fDhR5OO-m5S0lvnwDLjemm9u5Mx2gv2P9tWmiQPk-xE-YDqlINKUdgQ6YAzTqVm9xuvpjMS5u5zPwXcxunIg7GGdwUK4xWYQ4w"
+                                            alt="">
+                                    </div>
+                                    <div class="name">FAMAS | Teardown
+                                        <div class="points">
+                                            <i class="icon iconfont icon-vp"></i>&nbsp;34</div>
+                                    </div>
+                                </li>
+                                <li data-id="932755" class="exchange-skins-item bg-effect clearfix ">
+                                    <div class="exchange-skins-img">
+                                        <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f0Ob3Yi5FvISJnY2GmOXgMrfum25V4dB8xLHE8In03VGxrRc5YWH7cIDEIVRqN13V_QDskue8hse7uJqbyXJr7nI8pSGK39kSQ_o"
+                                            alt="">
+                                    </div>
+                                    <div class="name">SSG 08 | Slashed
+                                        <div class="points">
+                                            <i class="icon iconfont icon-vp"></i>&nbsp;34</div>
+                                    </div>
+                                </li>
+                                <li data-id="880641" class="exchange-skins-item bg-effect clearfix ">
+                                    <div class="exchange-skins-img">
+                                        <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FBRw7P7NYjV9-N24q4iOluHtfemJxzkCv5V3ibCToN33igXj_hdqZTv6IIWWdwZoNQzT-1O7xO3tgJai_MOeifog2Vk"
+                                            alt="">
+                                    </div>
+                                    <div class="name">AWP | Safari Mesh
+                                        <div class="points">
+                                            <i class="icon iconfont icon-vp"></i>&nbsp;35</div>
+                                    </div>
+                                </li>
+                                <li data-id="928351" class="exchange-skins-item bg-effect clearfix ">
+                                    <div class="exchange-skins-img">
+                                        <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f0vL3dzxG6eOxhoGYhPv1Pb_ummJW4NE_0ruYoNz0jgflqEJrZD3yII-dcQA4ZFzV8wXqlLvogsC6v57OwCRn7j5iuyiZeoRmBw"
+                                            alt="">
+                                    </div>
+                                    <div class="name">SSG 08 | Acid Fade
+                                        <div class="points">
+                                            <i class="icon iconfont icon-vp"></i>&nbsp;36</div>
+                                    </div>
+                                </li>
+                                <li data-id="922631" class="exchange-skins-item bg-effect clearfix ">
+                                    <div class="exchange-skins-img">
+                                        <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zFdC5K08i3mr-HnvD8J_WBxTwD6ZB12b7Hodumig23rUY5YTymJ4TBcFA7NVvW-FW5l-zr1JXtot2XnkNBBWuK"
+                                            alt="">
+                                    </div>
+                                    <div class="name">AK-47 | Safari Mesh
+                                        <div class="points">
+                                            <i class="icon iconfont icon-vp"></i>&nbsp;36</div>
+                                    </div>
+                                </li>
+                                <li data-id="932915" class="exchange-skins-item bg-effect clearfix ">
+                                    <div class="exchange-skins-img">
+                                        <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f0uL3fThU5d2inIGFqPv9NLPF2DtVuMZ03ruU99mm3wDi_0E4Yz3yctTDJgZtYQ2D_FK6lLzngJG86s_XiSw0q3P5_qg"
+                                            alt="">
+                                    </div>
+                                    <div class="name">SSG 08 | Abyss
+                                        <div class="points">
+                                            <i class="icon iconfont icon-vp"></i>&nbsp;37</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-primary" id="confirm">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('./foot.html')
+    <script>
+        $(document).ready(function () {
+            $(".scroll").mCustomScrollbar();
+
+            $('#item_exchange').on('click', function(){
+                $('#exchange').modal();
+            });
+        });
+    </script>
+</body>
+
+</html>

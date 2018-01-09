@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})
+
+        <div class="content-wrap">
+
+            @@include('./header.html') @@include('./navbar.html')
+
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="home">
+                        <a href="/">
+                            <i class="icon iconfont icon-home"></i> Home</a>
+                    </li>
+                    <li class="active">News</li>
+                </ol>
+            </div>
+
+            <div class="container">
+                <div class="panel panel-default panel-inverse deposit">
+                    <div class="panel-heading">Add Points</div>
+                    <div class="panel-body">
+                        <div class="panel-remarks text-right">
+                            <span class="text-gold">100</span> points =
+                            <span class="text-gold">1.00</span> USD </div>
+                        <div class="panel-content">
+                            <form action="/default/exchange/getdata" method="post" class="form-inline">
+                                <div class="form-group">
+                                    <div class="select">
+                                        <input type="hidden" id="qty_hide" name="qty" value="2000">
+                                        <input type="text" class="select_text" id="qty" autocomplete="off" name="" placeholder="2,000" value="2,000">
+                                        <ul class="select_ul" style="">
+                                            <li class="" data-value="500">
+                                                <span>
+                                                    <i class="icon iconfont icon-vp"></i>&nbsp;
+                                                    <span>500</span>
+                                                </span>
+
+
+                                            </li>
+                                            <li class="" data-value="1000">
+                                                <span>
+                                                    <i class="icon iconfont icon-vp"></i>&nbsp;
+                                                    <span>1000</span>
+                                                </span>
+
+
+                                            </li>
+                                            <li class="" data-value="2000">
+                                                <span>
+                                                    <i class="icon iconfont icon-vp"></i>&nbsp;
+                                                    <span>2000</span>
+                                                </span>
+
+
+                                            </li>
+                                            <li class="" data-value="5000">
+                                                <span>
+                                                    <i class="icon iconfont icon-vp"></i>&nbsp;
+                                                    <span>5000</span>
+                                                </span>
+
+
+                                            </li>
+                                            <li class="" data-value="8000">
+                                                <span>
+                                                    <i class="icon iconfont icon-vp"></i>&nbsp;
+                                                    <span>8000</span>
+                                                </span>
+
+
+                                            </li>
+                                            <li class="" data-value="10000">
+                                                <span>
+                                                    <i class="icon iconfont icon-vp"></i>&nbsp;
+                                                    <span>10000</span>
+                                                </span>
+
+
+                                            </li>
+                                            <li class="" data-value="20000">
+                                                <span>
+                                                    <i class="icon iconfont icon-vp"></i>&nbsp;
+                                                    <span>20000</span>
+                                                </span>
+
+
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group giveaway hide" id="giveaways">
+                                    +
+                                    <i class="icon iconfont icon-vp"></i>&nbsp;
+                                    <span></span>
+                                </div>
+                                <div class="form-group symbol">
+                                    =
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control coins" id="price" disabled="disabled" placeholder="" value="$ 0 ">
+                                </div>
+
+                                <div class="block">
+                                    <button type="submit" class="btn btn-primary btn-deposit">ADD POINTS</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./footer.html')
+
+        </div>
+    </main>
+
+
+    @@include('./foot.html')
+</body>
+
+</html>

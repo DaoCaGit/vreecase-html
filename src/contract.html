@@ -165,14 +165,12 @@
 
                     </div>
                     <div class="combinations-box">
-                        <div class="comb-effect" style="position: absolute; top: 0px; z-index: 999; display: none;">
+                        <div class="comb-effect" style="position: absolute; top: 0px; left: 25px; z-index: 999; display: none;">
                             <img src="/csgo/images/combinations/tin/0007.png" alt="">
                         </div>
 
                         <!-- combinations-show start -->
                         <div class="combinations-show" id="combinations-show" style="opacity: 1;">
-                            <div class="combinations-show-img" id="combinations-img"></div>
-
                             <div class="combinations-show-result bounceIn-cbo" id="combinations-result">
                                 <img id="img-result" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17PLfYQJK7dK4jYG0n_L1JaLummpD78A_3evD99WmiQ3i80ZqZ26hLYXGdwE5aF-Gq1noyem-0JDq6MmcyXU27D5iuyi6g0m_5A"
                                     alt="">
@@ -329,7 +327,6 @@
                         var synthesisList = $('.synthesis-list');
                         synthesisList.find('.light-bg').css('opacity', 0);
                         synthesisList.find('.inventory-item').css('opacity', 1);
-                        $('#combinations-img').hide();
                         $('#combinations-show').css('opacity', 1);
                         $('#combinations-result').css('background-image', 'url('+com_bg+')');
                         $('#combinations-result').show().addClass('bounceIn-cbo');
@@ -366,7 +363,6 @@
                     $('#combinations-show').animate({opacity : 0}, 1330, 'linear');
                     $('#combinations-result').hide();
                     $('#combinations-tips').hide();
-                    $('#combinations-img').show();
 
                     $('#img-result').attr('src', '');
                     $('#result-name').html('');
@@ -395,7 +391,6 @@
                     $('#combinations-show').css('opacity', 1);
                     $('#combinations-result').hide();
                     $('#combinations-tips').show();
-                    $('#combinations-img').show();
                 }
 
             };

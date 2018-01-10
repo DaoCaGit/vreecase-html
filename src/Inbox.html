@@ -12,18 +12,195 @@
 
         <div class="content-wrap">
 
-            @@include('./header.html')
-            @@include('./navbar.html')
+            @@include('./header.html') @@include('./navbar.html')
 
             <div class="user-center-wrap clearfix">
-
-                @@include('./sidebar.html', {"active": "accountInfo"})
+                @@include('./breadcrumb.html') @@include('./sidebar.html', {"active": "messages"})
 
                 <div class="ucenter-content">
-                    <div class="panel panel-ucenter">
-                        <div class="panel-heading">Account Info</div>
-                        <div class="panel-body clearfix">
+                    <div class="customers-messages clearfix">
+                        <div class="messages-left">
+                            <div class="left-header clearfix">
+                                <a class="left-header-item" href="/customers/messages?type=unread">
+                                    <i class="icon iconfont icon-email"></i>
+                                    <p>Unread mail</p>
+                                </a>
+                                <a class="left-header-item selected" href="/customers/messages?type=all">
+                                    <i class="icon iconfont icon-apply"></i>
+                                    <p>All mail</p>
+                                </a>
+                                <a class="left-header-item" href="/customers/messages?type=official">
+                                    <i class="icon iconfont icon-notice2"></i>
+                                    <p>Official info</p>
+                                </a>
+                            </div>
 
+                            <div class="left-body">
+                                <ul>
+                                    <li class="message-li" data-id="11779" data-title="Top Up To Get Free Cases And Coupons" data-time="2017-11-15 08:04:01">
+                                        <div>
+                                            <div class="mycheck">
+                                                <input type="checkbox" class="del" value="11779" id="check_11779" name="del">
+                                                <label for="check_11779"></label>
+                                            </div>
+                                            <p class="">
+                                                Top Up To Get Free Cases And Coupons
+                                                <br>
+                                                <span>system 2017-11-15 08:04:01</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="message-li" data-id="11245" data-title="System Maintenance" data-time="2017-10-18 04:00:09">
+                                        <div>
+                                            <div class="mycheck">
+                                                <input type="checkbox" class="del" value="11245" id="check_11245" name="del">
+                                                <label for="check_11245"></label>
+                                            </div>
+                                            <p class="">
+                                                System Maintenance
+                                                <br>
+                                                <span>system 2017-10-18 04:00:09</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="message-li" data-id="11205" data-title="Notice For PUBG Users" data-time="2017-10-12 08:57:32">
+                                        <div>
+                                            <div class="mycheck">
+                                                <input type="checkbox" class="del" value="11205" id="check_11205" name="del">
+                                                <label for="check_11205"></label>
+                                            </div>
+                                            <p class="">
+                                                Notice For PUBG Users
+                                                <br>
+                                                <span>system 2017-10-12 08:57:32</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="message-li" data-id="11031" data-title="Cheer Up For PUBG Crate" data-time="2017-09-29 09:53:48">
+                                        <div>
+                                            <div class="mycheck">
+                                                <input type="checkbox" class="del" value="11031" id="check_11031" name="del">
+                                                <label for="check_11031"></label>
+                                            </div>
+                                            <p class="">
+                                                Cheer Up For PUBG Crate
+                                                <br>
+                                                <span>system 2017-09-29 09:53:48</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="message-li" data-id="10155" data-title="Top Up To Get A Free Case" data-time="2017-09-04 08:34:53">
+                                        <div>
+                                            <div class="mycheck">
+                                                <input type="checkbox" class="del" value="10155" id="check_10155" name="del">
+                                                <label for="check_10155"></label>
+                                            </div>
+                                            <p class="">
+                                                Top Up To Get A Free Case
+                                                <br>
+                                                <span>system 2017-09-04 08:34:53</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="message-li" data-id="10087" data-title="Steam Server Error" data-time="2017-08-31 14:11:13">
+                                        <div>
+                                            <div class="mycheck">
+                                                <input type="checkbox" class="del" value="10087" id="check_10087" name="del">
+                                                <label for="check_10087"></label>
+                                            </div>
+                                            <p class="">
+                                                Steam Server Error
+                                                <br>
+                                                <span>system 2017-08-31 14:11:13</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="message-li" data-id="6349" data-title="Introduce Vreecase To Your Friends" data-time="2017-08-16 08:12:11">
+                                        <div>
+                                            <div class="mycheck">
+                                                <input type="checkbox" class="del" value="6349" id="check_6349" name="del">
+                                                <label for="check_6349"></label>
+                                            </div>
+                                            <p class="">
+                                                Introduce Vreecase To Your Friends
+                                                <br>
+                                                <span>system 2017-08-16 08:12:11</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="message-li" data-id="5155" data-title="A Free Case Is Waiting For You!" data-time="2017-08-11 07:35:25">
+                                        <div>
+                                            <div class="mycheck">
+                                                <input type="checkbox" class="del" value="5155" id="check_5155" name="del">
+                                                <label for="check_5155"></label>
+                                            </div>
+                                            <p class="">
+                                                A Free Case Is Waiting For You!
+                                                <br>
+                                                <span>system 2017-08-11 07:35:25</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="left-footer">
+                                <div class="clearfix">
+                                    <button type="button" class="btn pull-left" id="remove">Remove</button>
+                                    <button type="button" class="btn pull-right" id="remove_all">Remove All </button>
+                                </div>
+
+                                <nav class="page-custom">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="messages-right">
+                            <div class="messages-box">
+                                <div class="right-header text-center">
+                                    <p class="title">Top Up To Get Free Cases And Coupons</p>
+                                    <p class="system"></p>
+                                    <p class="time">2017-11-15 08:04:01</p>
+                                </div>
+                                <div class="right-body">
+                                    <div class="messages-content">Dear customer,
+                                        <br>
+                                        <br> Here come special offers for November! Free cases and coupons are prepared for you.
+                                        The more you top up, the more you will get.
+                                        <br>
+                                        <br> -Top up $8, Get Free Doge, Duck Cases &amp; 10% coupon
+                                        <br> -Top up $20, Get Free Doge, Duck, NICONICONI Cases &amp; 10% coupon
+                                        <br> -Top up $50, Get Diamond Cases &amp; 10% coupon
+                                        <br>
+                                        <br> Just check
+                                        <a href="/contents/top-up-to-get-free-cases.html" target="_blank">this link</a> to see what you will get by topping up at one time. Don't miss out!</div>
+                                    <div class="inscribe text-right" style="display: block;">
+                                        Vreecase.com
+                                        <br>
+                                        <span class="inscribe-time">2017-11-15</span>
+                                    </div>
+                                </div>
+                                <div class="right-footer text-center" style="display: block;"><div class="text"><span>( No need to reply )</span></div>------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})
+
+        <div class="content-wrap">
+
+            @@include('./header.html') @@include('./navbar.html')
+
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="home">
+                        <a href="/">
+                            <i class="icon iconfont icon-home"></i> Home</a>
+                    </li>
+                    <li class="active">GIFT</li>
+                </ol>
+            </div>
+
+            <div class="container">
+                <div class="content">
+                    <div class="text-center">
+                        <div class="com-title" role="tablist" style="padding-left: 90px; padding-right: 90px; margin: 5px auto;">
+                            <div class="com-title-text ">FREE GIFT</div>
+                        </div>
+                    </div>
+
+                    <div class="giveaway-box">
+                        <div class="ga-list">
+                            <input type="text" id="trade_link_input" class="form-control" placeholder="Enter your trade link" value="https://steamcommunity.com/tradeoffer/new/?partner=329050600&amp;token=HRInJTsP"
+                                disabled="">
+
+                            <a href="javascript:;" class="btn btn-tga btn-dble">To Enter</a>
+
+                            <span class="rgt">
+                                <button class="btn award-btn" onclick="cTask('trade_link');">Claim the award (1)</button>
+                            </span>
+                        </div>
+                        <div class="ga-list">
+                            <input type="text" id="mail_input" class="form-control" placeholder="Enter your Mail" value="daocaoclf@gmail.com">
+
+                            <a href="javascript:;" onclick="showMailModel();" class="btn btn-tga">To Verify</a>
+
+                            <span class="rgt">
+                                <button class="btn award-btn btn-dble" disabled="">Claim the award (2)</button>
+                            </span>
+                        </div>
+                        <div class="ga-list">
+                            <input type="text" id="afft_input" class="form-control" placeholder="Enter Referral Code">
+
+                            <a href="javascript:;" onclick="showAffModel();" class="btn btn-tga">To Enter</a>
+
+                            <span class="rgt">
+                                <button class="btn award-btn btn-dble" disabled="">Claim the award (3)</button>
+                            </span>
+                        </div>
+
+                        <div class="ga-list">
+                            <input type="text" id="mail_input" class="form-control" placeholder="Enter your Email" value="youailu1@gmail.com" disabled="">
+
+                            <a href="javascript:;" class="btn btn-tga btn-dble">To Verify</a>
+
+                            <span class="rgt text-tips">
+                                <i class="icon iconfont icon-success"></i>
+                                <span>You have claimed your reward</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <a style="padding: 10px;" href="javascript: void(0);" data-toggle="modal" data-target="#trade_link_model">trade_link_model</a>
+                    <a style="padding: 10px;" href="javascript: void(0);" data-toggle="modal" data-target="#vft_mail_modal">vft_mail_modal</a>
+                    <a style="padding: 10px;" href="javascript: void(0);" data-toggle="modal" data-target="#aff_init_model">aff_init_model</a>
+                </div>
+            </div>
+
+            @@include('./footer.html')
+
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade topup-modal modal-vft" id="trade_link_model" tabindex="-1" role="dialog" aria-labelledby="affModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="">
+                        ENTER TRADE LINK
+                    </h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <form>
+                        <div class="form-group">
+                            <label>Trade Link</label>
+                            <input value="" type="text" class="form-control" id="trade_link" placeholder="Trade Link">
+                            <p id="tlink_msg" class="help-block"></p>
+                        </div>
+                        <button class="btn btn-primary" id="v_tlink">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade topup-modal modal-vft" id="vft_mail_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Unified security verification
+                    </h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <form>
+                        <div class="form-group">
+                            <label>Please enter your security email</label>
+                            <div class="input-group">
+                                <input value="" type="text" class="form-control" id="vft_mail" placeholder="Enter your Mail">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" id="send_mail" type="button">Get Code</button>
+                                </span>
+                            </div>
+                            <p id="mail_msg" class="help-block"></p>
+                        </div>
+                        <div class="form-group">
+                            <label>Email verification code</label>
+                            <input id="mail_code" type="text" class="form-control" placeholder="Enter verification code">
+                            <p id="mail_code_msg" class="help-block"></p>
+                        </div>
+                        <button id="v_mail" class="btn btn-primary" id="recl-confirm">
+                            Confirm
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade topup-modal modal-vft" id="aff_init_model" tabindex="-1" role="dialog" aria-labelledby="affModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="affModalLabel">
+                        ENTER REFERRAL CODE
+                    </h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <form>
+                        <div class="form-group">
+                            <label>Referral Code</label>
+                            <input value="" type="text" class="form-control" id="referral_code" placeholder="Referral Code">
+                            <p id="aff_msg" class="help-block"></p>
+                        </div>
+                        <button class="btn btn-primary" id="aff-confirm">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @@include('./foot.html')
+</body>
+
+</html>

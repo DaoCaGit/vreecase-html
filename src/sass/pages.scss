@@ -680,7 +680,7 @@ $brand-primary: #ffd800 !default;
         width: 640px;
         .modal-body-effect {
             background: #0b0827;
-            background-image: linear-gradient( 0deg, rgb(79,123,179) 0%, rgb(53,92,141) 40%, rgb(26,60,103) 100%);
+            background-image: linear-gradient( 0deg, rgb(79, 123, 179) 0%, rgb(53, 92, 141) 40%, rgb(26, 60, 103) 100%);
         }
         .withVP-modal-tips {
             color: red;
@@ -2495,7 +2495,7 @@ $brand-primary: #ffd800 !default;
     color: #fff;
     height: 44px;
     line-height: 44px;
-    background-image: linear-gradient( 0deg, rgb(0,158,182) 0%, rgb(8,118,177) 40%, rgb(15,77,171) 100%);
+    background-image: linear-gradient( 0deg, rgb(0, 158, 182) 0%, rgb(8, 118, 177) 40%, rgb(15, 77, 171) 100%);
     width: 230px;
     margin: 0 auto;
 }
@@ -2505,6 +2505,7 @@ $brand-primary: #ffd800 !default;
     width: 76%;
     margin: 0 auto;
 }
+
 
 /* daily-modal end */
 
@@ -2643,6 +2644,7 @@ $brand-primary: #ffd800 !default;
         }
     }
 }
+
 
 /*customers-messages end*/
 
@@ -2795,10 +2797,11 @@ $brand-primary: #ffd800 !default;
 
 
 /*advice-form start*/
+
 .advice-form {
     color: #89b6fb;
     label {
-        span{
+        span {
             color: red;
         }
     }
@@ -2810,6 +2813,8 @@ $brand-primary: #ffd800 !default;
     text-align: center;
     margin-top: 50px;
 }
+
+
 /*advice-form end*/
 
 .giveaway-box {
@@ -2837,7 +2842,7 @@ $brand-primary: #ffd800 !default;
             border-style: solid;
             border-width: 1px;
             border-color: rgb(41, 81, 133);
-            background-image: linear-gradient( 0deg, rgb(0,158,182) 0%, rgb(8,118,177) 40%, rgb(15,77,171) 100%);
+            background-image: linear-gradient( 0deg, rgb(0, 158, 182) 0%, rgb(8, 118, 177) 40%, rgb(15, 77, 171) 100%);
             color: #fff;
             margin-left: 25px;
             &.btn-dble {
@@ -2854,7 +2859,7 @@ $brand-primary: #ffd800 !default;
         }
     }
 }
-  
+
 .modal-vft {
     .modal-dialog {
         width: 640px;
@@ -2870,8 +2875,265 @@ $brand-primary: #ffd800 !default;
     .help-block {
         color: #ffd800;
     }
-    .input-group-btn > .btn {
+    .input-group-btn>.btn {
         background: #89b6fa;
         color: #fff;
     }
 }
+
+/* contact_us start */
+
+.contact_us .row {
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.contact_us .iconhead {
+    border-bottom: 1px dashed #eee;
+}
+
+.contact_us .icon-head .iconfont {
+    color: #89b6fa;
+    font-size: 100px;
+}
+
+.contact_us .iconfont {
+    margin-right: 3px;
+    font-size: 18px;
+}
+
+.contact_us .icon-panel {
+    min-height: 374px;
+    background-color: #1b3c67;
+    border: 1px #89b6fa solid;
+    border-radius: 4px;
+    color: #89b6fa;
+}
+
+.contact_us .icon-head {
+    padding-top: 30px;
+    text-align: center;
+    color: #89b6fa;
+}
+
+.contact_us h4 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: -5px;
+}
+
+.contact_us .mail {
+    margin: 0 15px 0;
+    padding-top: 20px;
+    padding-bottom: 34px;
+    border-top: dashed 1px #89b6fa;
+}
+
+.contact_us .mail p {
+    line-height: 1;
+}
+
+.contact_us a {
+    color: #ffd800;
+}
+
+.contact_us a:hover {
+    color: #ffd800;
+}
+
+.text-contact {
+    color: #0085b4;
+}
+
+.contact_us .icon-head {
+    padding: 30px 20px;
+}
+.contact_us #last {
+    padding: 30px 10px 20px;
+}
+
+.contact_us .mail p {
+    margin: 0 20%;
+    line-height: inherit;
+}
+/* contact_us end */
+
+/* faq start */
+
+.faq {
+	margin: -30px;
+	background-color: #32193b;
+	min-height: 560px;
+	overflow: hidden;
+}
+
+.faq-left {
+	background-color: #32193b;
+	width: 100%;
+}
+
+.faq-content {
+	background-color: #2c1235;
+	min-height: 560px;
+	padding: 0 30px;
+}
+
+.faq-content .panel,
+.faq-content .panel-default>.panel-heading {
+	background: transparent;
+	border: 0;
+}
+
+.faq-content .panel-default>.panel-heading+.panel-collapse>.panel-body {
+	font-size: 14px;
+	color: #cfa7d5;
+	padding: 20px 0;
+}
+
+.faq-content .panel-default>.panel-heading+.panel-collapse>.panel-body {
+	border-top-color: #000;
+	border-bottom: 1px solid #3b1e46;
+	margin-top: -1px;
+}
+
+.faq-content .panel-default>.panel-heading {
+	font-size: 16px;
+	color: #cfa7d5;
+	padding: 21px 0;
+	border-bottom: 1px solid #3b1e46;
+}
+
+.faq-content .panel-default>.panel-heading a {
+	font-weight: bold;
+}
+
+.faq-content .panel-default>.panel-heading a:hover,
+.faq-content .panel-default>.panel-heading a:active,
+.faq-content .panel-default>.panel-heading a:focus {
+	color: #cfa7d5;
+}
+
+@media (min-width: 768px) {
+	.faq-left {
+		padding: 0px;
+		width: 22%;
+		min-height: 560px;
+		height: 100%;
+	}
+	.faq-content {
+		background-color: #2c1235;
+		min-height: 560px;
+		width: 78%;
+	}
+}
+
+.faq.content {
+	padding-bottom: 0;
+	height: auto;
+	padding-right: 50px;
+}
+
+.faq .nav-pills {
+	width: 75%;
+	margin-bottom: 20px;
+}
+
+.faq .nav-pills li {
+	height: 50px;
+	text-align: center;
+}
+
+.faq .nav-pills>.row>.active {
+	background-color: #2f333e;
+	color: #fff;
+}
+
+.faq .nav-pills li a {
+	border-radius: 0;
+	border: 1px solid #59345f;
+	border-left: 0;
+	color: #805082;
+}
+
+.faq .nav-pills>li.active>a,
+.faq .nav-pills>li.active>a:focus,
+.faq .nav-pills>li.active>a:hover {
+	color: #fff;
+	background-color: #cea7d4;
+	border-color: #cea7d4;
+}
+
+.faq .nav-pills li:first-child {
+	border-left: 1px solid #59345f;
+}
+
+.faq .nav-tabs {
+	border: 0;
+}
+
+.faq .nav-tabs>li {
+	margin: 0;
+	cursor: default;
+	background-color: #32193b;
+	border: 0px solid #32193b;
+	border-bottom-color: transparent;
+}
+
+.faq .nav-tabs>li>a {
+	color: #cea7d4;
+	border: 0;
+	height: 60px;
+	line-height: 60px;
+	margin-right: 0;
+	border-radius: 0;
+	padding: 0 30px;
+	font-size: 16px;
+	color: #774a7a;
+	background-image: url(../images/tab-line.png);
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center bottom;
+}
+
+.faq .nav-tabs>li:last-child a {
+	background: none;
+}
+
+.faq .nav-tabs>li>a:hover {
+	background: #2c1235;
+	color: #fff;
+}
+
+.faq .nav-tabs>li.active>a {
+	border: 0;
+	background-color: #2c1235;
+	color: #fff;
+}
+
+.faq .nav-tabs>li.active>a:hover,
+.faq .nav-tabs>li.active>a:focus {
+	color: #fff;
+}
+
+.faq .iconfont {
+	margin-right: 10px;
+	font-size: 20px;
+}
+
+.faq .panel1 .tab-pane {
+	height: 100%;
+	padding: 28px;
+	font-size: 14px;
+	font-color: #666;
+}
+
+.faq .panel1 .tab-pane p {
+	font-size: 14px;
+	color: #666;
+}
+
+.faq .panel1 .tab-pane p>span {
+	color: #000;
+}
+
+/* faq end */

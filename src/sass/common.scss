@@ -27,7 +27,7 @@ li {
         margin: 0;
         margin-bottom: 30px;
         padding: 0;
-        color: #fff;
+        color: #89b6fa;
         margin-bottom: 24px;
         font-weight: normal;
     }
@@ -1507,4 +1507,18 @@ li {
 fieldset[disabled] .form-control {
     background-color: transparent;
     opacity: 1;
+}
+
+.modal-msg {
+    .modal-body {
+        color: #ffd800;
+    }
+    .modal-footer {
+        background: #1a3c67;
+        border-top: 1px solid #101326;
+        .btn {
+            font-size: 14px;
+            padding: 6px 24px;
+        }
+    }
 }

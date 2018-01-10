@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+<style>
+    .content-title {
+        display: none;
+    }
+</style>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})
+
+        <div class="content-wrap">
+
+            @@include('./header.html') @@include('./navbar.html')
+
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="home">
+                        <a href="/">
+                            <i class="icon iconfont icon-home"></i> Home</a>
+                    </li>
+                    <li class="active">News</li>
+                </ol>
+            </div>
+
+            <div class="container">
+                <div class="content">
+                    <h2 class="content-title">FAQ</h2>
+                    <div class="faq">
+                        <div class="faq-left pull-left">
+                            <ul role="tablist" class="nav nav-tabs nav-stacked">
+                                <li role="presentation" class="active">
+                                    <a role="tab" aria-controls="home" href="#content1" data-toggle="tab" aria-expanded="true">
+                                        <i class="icon iconfont icon-tip02"></i> About Vreecase.com </a>
+                                </li>
+                                <li role="presentation" class="">
+                                    <a role="tab" aria-controls="profile" href="#content2" data-toggle="tab" aria-expanded="false">
+                                        <i class="icon iconfont icon-balance"></i> Balance lssues </a>
+                                </li>
+                                <li role="presentation" class="">
+                                    <a role="tab" aria-controls="profile" href="#content3" data-toggle="tab" aria-expanded="false">
+                                        <i class="icon iconfont icon-withdrawn"></i> Withdrawn lssues </a>
+                                </li>
+                                <li role="presentation" class="">
+                                    <a role="tab" aria-controls="messages" href="#content4" data-toggle="tab" aria-expanded="false">
+                                        <i class="icon iconfont icon-safety"></i> About Account Safety </a>
+                                </li>
+                                <li role="presentation" class="">
+                                    <a role="tab" aria-controls="messages" href="#content5" data-toggle="tab" aria-expanded="false">
+                                        <i class="icon iconfont icon-transaction"></i> Trade lssues </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="faq-content pull-left">
+                            <div class="tab-content">
+                                <div role="tabpanel" id="content1" class="tab-pane fade active in">
+                                    <div class="panel-group" id="aboutvr" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#aboutvr" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        What is Vreecase.com? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Vreecase.com is a website that offers good service for Counter-Striker: Global Offensive players. You may have chances to
+                                                        receive some wonderful skins by opening cases here.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#aboutvr" href="#collapseTwo" aria-expanded="false"
+                                                        aria-controls="collapseTwo"> What can I do on Vreecase.com? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        For now we only have Cases for the users to open and can get skins from the cases. More terms will online in the near future
+                                                        for you to have fun.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#aboutvr" href="#collapseThree" aria-expanded="false"
+                                                        aria-controls="collapseThree"> How these cases work? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Before opening Cases
+                                                    </p>
+                                                    <p>
+                                                        1.Login to Steam account, set your inventory visibility to "public" before to be able to receive a trade offer.
+                                                        <br> 2. Add your steam trade offer URL to vreecase.com and save it.
+                                                        <br> 3. Be sure to check if you are able to trade on Steam, otherwise
+                                                        our robot will not be able to send you your items.
+                                                        <br> 4. Open your inventory, make sure there is no trade ban and it is
+                                                        at least 7 days after the password had been changed.
+                                                        <br> 5. Using your vreecase.com account balance to open cases, please&nbsp;top&nbsp;up
+                                                        enough balance in your account.
+                                                        <br> Opening cases
+                                                        <br> Choosing one of the cases you are willing to open in a time, then
+                                                        simply click "Open case", you will finally see what weapon you'll
+                                                        get from the case.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingfour">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#aboutvr" href="#collapsefour" aria-expanded="false"
+                                                        aria-controls="collapsefour"> What is VP? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        VP - Vree Points, as the name suggests, VP is referred to barter as the virtual proprietary currency used in opening cases
+                                                        on Vreecase.com. Easy and simple to open cases with VP.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" id="content2" class="tab-pane fade">
+                                    <div class="panel-group" id="balance" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne1">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#balance" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+                                                        Can I use my Steam money to open cases on Vreecase.com? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne1">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Steam Money are not applicable. You should top up the balance on vreecase.com through paying by cash or paying by skins.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo2">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#balance" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                                                        I have topped up the balance but money didn’t come. What to do? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo2">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Calm down! Your payment may be delayed for 5-10 minutes. If your account was not refilled within an hour, please contact
+                                                        the support email or leave a message on Member Center.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree3">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#balance" href="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                                                        Can I sell skins for points? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree3">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Sure. Turn to your Member Center, click on "Add Points", choose "Pay By Steam Skins", then sell your skins from your inventory
+                                                        and waiting for the trade process. After the "Trade Accepted", your
+                                                        account balance will be topped up.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" id="content3" class="tab-pane fade">
+                                    <div class="panel-group" id="withdrawn" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne31">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#withdrawn" href="#collapseOne31" aria-expanded="true" aria-controls="collapseOne31">
+                                                        How can I transact the skins that I have won? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne31" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne31">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Go to your vreecase.com Item Inventory page and click on "Send" button.
+                                                        <br> You will receive your items via trade offer, which you can find
+                                                        <a href="https://steamcommunity.com/id/me/tradeoffers" target="_blank">
+                                                            <span style="color:#FF9900;">here</span>
+                                                        </a>.
+                                                        <br> You just have to accept the trade request from our bot.
+                                                        <br>
+                                                        <span style="color:#FF9900;">Attention:</span>
+                                                        <br> 1. Please set your Inventory Privacy Settings to "Public" from the
+                                                        Profile Page.
+                                                        <br> 2. Also please verify that your steam trade offer URL is working.
+                                                        Whenever you create a new Trade URL, your old one will be useless.
+                                                        So when you change the URL please don't forget to update it on our
+                                                        site.
+                                                        <br> 3. If you don't accept the trade offer from our bot within 24 hours,
+                                                        the item will be returned to your account.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo32">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#withdrawn" href="#collapseTwo32" aria-expanded="false" aria-controls="collapseTwo32">
+                                                        What does "Trading Status" mean? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo32" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo32">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Insufficient Inventory - Out of stock. Please wait for 40 minutes and try again.
+                                                        <br> The transaction is processing - Please clear your cookies or change
+                                                        your browser to try.
+                                                        <br> Send offer error - Steam error. We can't help you with that. Please
+                                                        try again later.
+                                                        <br> Withdraw failed - Please send your steam link to support@vreecase.com.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" id="content4" class="tab-pane fade">
+                                    <div class="panel-group" id="safety" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne41">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#safety" href="#collapseOne41" aria-expanded="true" aria-controls="collapseOne41">
+                                                        Is it safe to login with my Steam account? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne41" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne41">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Logging in with Steam will never provide us with any private information. Steam uses Open ID to login to third party websites.
+                                                        <br>
+                                                        <span style="color:#FF9900;">Warning:</span>
+                                                        <br> If you didn't receive your items within 24 hours, please contact
+                                                        us via
+                                                        <span style="color:#FF9900;">support#vreecase.com (replace "#" with "@") </span> for help.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" id="content5" class="tab-pane fade">
+                                    <div class="panel-group" id="trade" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne51">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#trade" href="#collapseOne51" aria-expanded="true" aria-controls="collapseOne51">
+                                                        I didn’t received any trade offers after I click "Send". What should I do? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne51" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne51">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Cannot receive a trade offers always happens. You can check it by sending a trade offer to a friend.
+                                                        <br> There are a few different reasons why you may be unable to trade
+                                                        items. Please check on Steam "Trading and Market Restrictions" article
+                                                        <a href="https://support.steampowered.com/kb_article.php?ref=1047-edfm-2932" target="_blank">
+                                                            <span style="color:#FF9900;">here</span>
+                                                        </a>.
+                                                        <br> You just have to accept the trade request from our bot.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo52">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#trade" href="#collapseTwo52" aria-expanded="false" aria-controls="collapseTwo52">
+                                                        Where do I update my Trade URL? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo52" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo52">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Update your Trade URL on your profile page and&nbsp;find your Trade URL
+                                                        <a href="https://steamcommunity.com/profiles/76561198373170617/tradeoffers/privacy" target="_blank">
+                                                            <span style="color:#FF9900;">here</span>
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo53">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#trade" href="#collapseTwo53" aria-expanded="false" aria-controls="collapseTwo53">Why it shows "You didn't purchase CS:GO game"? </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo53" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo53">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Please follow the steps below and try again.
+                                                        <br> 1. Public your inventory and profile.
+                                                        <br> 2. Try to trade with your friends to see if your trade link works.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree54">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#trade" href="#collapseTwo54" aria-expanded="false" aria-controls="collapseTwo54">
+                                                        My trade is Active but the trade link doesn’t work. </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo54" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree54">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Please wait 5 minutes. The Trade Request will be canceled and you can request a new one. If it doesn't work afterwards, please
+                                                        contact us via
+                                                        <span style="color:#FF9900;">support#vreecase.com (replace "#" with "@")</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./footer.html')
+
+        </div>
+    </main>
+
+
+    @@include('./foot.html')
+</body>
+
+</html>

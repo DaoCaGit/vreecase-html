@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})
+
+        <div class="content-wrap">
+
+            @@include('./header.html') @@include('./navbar.html')
+
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="home">
+                        <a href="/">
+                            <i class="icon iconfont icon-home"></i> Home</a>
+                    </li>
+                    <li class="active">News</li>
+                </ol>
+            </div>
+
+            <div class="container">
+                <div class="content">
+                    <h2 class="content-title">Contact Us </h2>
+                    <div class="contact_us">
+                        <div class="row" style="margin:0 auto;">
+                            <div class="col-sm-4">
+                                <div class="icon-panel">
+                                    <div class="icon-head">
+                                        <i class="icon iconfont icon-order"></i>
+                                        <h4>
+                                            Order Issues
+                                        </h4>
+                                    </div>
+                                    <div class="mail">
+                                        <p>
+                                            Please email to
+                                            <br>
+                                            <a href="javascript:;" class="text-contact">
+                                                <i class="icon iconfont icon-email"></i>support#vreecase.com (replace "#" with "@")</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="icon-panel">
+                                    <div class="icon-head">
+                                        <i class="icon iconfont icon-gift"></i>
+                                        <h4>
+                                            Activities, Giveaways, News
+                                        </h4>
+                                    </div>
+                                    <div class="mail">
+                                        <p>
+                                            Please follow us on
+                                            <br>
+                                            <a href="https://twitter.com/vreecase" target="_blank" class="text-contact">
+                                                <i class="icon iconfont icon-tw"></i>@VreeCase</a>
+                                        </p>
+                                        <p>
+                                            <a href="https://www.facebook.com/VreeCase/" target="_blank" class="text-contact">
+                                                <i class="icon iconfont icon-fb"></i>@VreeCase</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="icon-panel">
+                                    <div class="icon-head">
+                                        <i class="icon iconfont icon-suggest"></i>
+                                        <h4>
+                                            Suggestion
+                                        </h4>
+                                    </div>
+                                    <div class="mail">
+                                        <p style="width:100%;margin:0;text-align:center;">
+                                            <br>
+                                            <a href="/customers/advice" target="_blank" class="text-contact">
+                                                <i class="icon iconfont icon-edit"></i>Leave your suggestions here</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./footer.html')
+
+        </div>
+    </main>
+
+
+    @@include('./foot.html')
+</body>
+
+</html>

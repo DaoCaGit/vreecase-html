@@ -103,110 +103,77 @@ function numberformat(val){
 (function ($) {
     // Drop Skins
     $.fn.dropMarquee = function (options) {
-        var opts = $.extend({}, $.fn.dropMarquee.defaults, options);
+        var defaults = {};
+        var opts = $.extend({}, defaults, options);
         var $marquee = $(this);
-        var _scrollObj = $marquee.get(0);
-        var scrollW = $marquee.width();
-        var scrollH = $marquee.height();
-        var $element = $marquee.children();
-        var $kids = $element.children();
-        var scrollSize = 0;
-        var move = 0;
-        var delFlage = true;
-
-        $element.css({
-            height: 10000
-        });
-
-        scrollSize = $kids["outerHeight"]() * $kids.length;
-
-        this.show = function (data) {
+        var $element = $marquee;
+        var scrollH =  $element.height();
+        var listView = null;
+        var kidheight = 80;
+    
+        this.creat = function(data){
             if (data.length <= 0) return;
-            var html = '';
+            var $listViews = $element.find('.list-view');
+            var listViewCount = $listViews.length;
+
+            if(listViewCount > 25){
+                var length = listViewCount - 10;
+                while (length > 0) {
+                    length--;
+                    $($listViews[length]).remove();
+                }
+                scrollH = kidheight * $element.find('.boxs-live').length;
+            }
+
+            var kidsCount = data.length;
+            var boxsNew = '';
             $.each(data, function (key, item) {
                 item.quality_color = item.quality_color ? item.quality_color : "317aff";
                 var sHex = '#' + item.quality_color;
                 var sRgbColor = Unit.colorRgb(sHex);
-
-                html += '<li class="boxs-live boxs-live-new">' +
+                var bgStyle = 'background-image: -moz-linear-gradient( 0deg, rgba('+sRgbColor+' , 0.2) 0%, rgb(24, 34, 61) 35%, rgb(24, 34, 61) 100%); background-image: -webkit-linear-gradient( 0deg, rgba('+sRgbColor+' , 0.2) 0%, rgb(24, 34, 61) 35%, rgb(24, 34, 61) 100%); background-image: -ms-linear-gradient( 0deg, rgba('+sRgbColor+' , 0.2) 0%, rgb(24, 34, 61) 35%, rgb(24, 34, 61) 100%);'
+                
+                boxsNew += '<li class="boxs-live boxs-live-new" style="' + bgStyle + '" >' +
                     '<a href="/profile/' + item.steamid + '">' +
-                    '<div class="boxs-live-skins">' +
-                    '<div class="boxs-live-skins-l">' + item.item_name + '</div>' +
-                    '<div class="boxs-live-skins-r">' +
-                    '<img src=" ' + item.image + '" alt="">' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="boxs-live-case">' +
-                    '<div class="boxs-live-case-l">' +
-                    '<img class="head" src="./images/dev/head.png" alt="">' +
-                    '<span class="nkname">' + item.item_name + '</span>' +
-                    '</div>' +
-                    '<div class="boxs-live-case-r">' +
-                    '<span class="case-name">' + item.customer_name + '</span>' +
-                    '<div style="background: url(./images/dev/case_230x208.png) right center no-repeat; background-size: 120px auto;" class="case-img"></div>' +
-                    '</div>' +
-                    '</div>' +
+                        '<div class="boxs-live-skins">' +
+                            '<div class="boxs-live-skins-l">' + item.item_name + '</div>' +
+                            '<div class="boxs-live-skins-r">' +
+                            '<img src=" ' + item.image + '" alt="">' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="boxs-live-case">' +
+                            '<div class="boxs-live-case-l">' +
+                                '<img class="head" src="./images/dev/head.png" alt="">' +
+                                '<span class="nkname">' + item.item_name + '</span>' +
+                            '</div>' +
+                            '<div class="boxs-live-case-r">' +
+                                '<span class="case-name">' + item.customer_name + '</span>' +
+                                '<div style="background: url(./images/dev/case_230x208.png) right center no-repeat; background-size: 120px auto;" class="case-img"></div>' +
+                            '</div>' +
+                        '</div>' +
                     '</a>' +
                     '</li>';
-
-                //var style = 'background-image: radial-gradient(45px 45px, rgba(' + sRgbColor + ', 0.4), rgba(255, 255, 255, 0));';
-                // html += '<li style="' + style + '" data-toggle="popover-skin" data-color="' + sRgbColor + '"  data-itemname="' + item.item_name + '" data-customername="' + item.customer_name + '" data-avatar="' + item.avatar + '"><a href="/profile/' + item.steamid + '" target="_blank"><img  src="' + item.image + '" width="110" height="auto"></a></li>';
             });
-            $element.prepend(html);
 
-            return false;
+            boxsNew = '<ul class="boxs-live-list clearfix">' + boxsNew + '</ul>';
+            listView =  $('<div class="list-view"></div>');
+            var kidsheight = data.length * kidheight;
+            listView.html(boxsNew);
+            listView.css({'height': '0px', 'transform': 'translate3d(0px, -' + kidsheight + 'px, 0px)'});
+            listView.data('height', data.length * 250);
 
-            var $kids = $element.children();
+            scrollH += kidsheight;
+            $element.children('.items-container').prepend(listView);
+            $element.css({'height': scrollH + 'px', 'transition': 'transform 0.7s ease-out', 'transform': 'translate3d(0px, ' + kidsheight + 'px, 0px)'});
 
-            if ($kids.length <= 10) {
-                $element.find('.boxs-live-new').show().removeClass('.boxs-live-new');
-                return false;
-            }
-
-            move += data.length * $kids["outerHeight"]();
-
-            if (delFlage) {
-                $element.css({
-                    transition: "all 1s cubic-bezier(.32,.64,.45,1)",
-                    'animation-play-state': 'pausedss'
-                });
-                $element.css({
-                    transform: "translate3d(0, " + move + "px, 0)"
-                });
-            }
-            $element.find('.boxs-live-new').show().removeClass('.boxs-live-new');
-
-            if ($kids.length >= 50 && delFlage) {
-                delFlage = false;
-                setTimeout(function () {
-                    var length = $kids.length - 10;
-                    while (length > 0) {
-                        length--;
-                        $($kids[length]).remove()
-                    }
-                    $element.css({
-                        transition: "",
-                        'animation-play-state': ''
-                    });
-                    $element.css({
-                        transform: "translate3d(-0px,0,0)"
-                    });
-                    left = 0;
-                    delFlage = true;
-                }, 1000);
-            }
+            setTimeout(function(){
+                $element.css({'transition': 'none', 'transform': 'translate3d(0px, 0px, 0px)'});
+                listView.css({'height': kidsheight + 'px', 'transform': 'translate3d(0px, 0px, 0px)'});
+            }, 700);
 
         }
-
         return this;
-    };
-    $.fn.dropMarquee.defaults = {
-        isEqual: true
-    };
-
-    $.fn.dropMarquee.setDefaults = function (settings) {
-        $.extend($.fn.dropMarquee.defaults, settings);
-    };
+    }
 
     var marquee = $('#dropMarquee').dropMarquee();
     var dataTest = [{
@@ -223,16 +190,30 @@ function numberformat(val){
         "steamid": "76561198388496951",
         "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/12\/12424301360aa0e50f2986b7eaf6f3ffd687f498.jpg",
         "quality_color": "5E98D9"
+    },{
+        "item_name": "R8 Revolver | Crimson Web (Well-Worn)",
+        "image": "https:\/\/steamcommunity-a.akamaihd.net\/economy\/image\/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopL-zJAt21uH3eSR9-9m0h7-GkvP9JrbummpD78A_3rmXo42ijATh8hA9azz3I4PHclM_NQnX8wXsx7juhsO478-fyCQx7D5iuyhlLV5UlA",
+        "customer_name": "Axcerty",
+        "steamid": "76561198370947142",
+        "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/eb\/ebfb74f46188ab433eeaee23a9213f70933ed656.jpg",
+        "quality_color": "4B69FF"
+    },{
+        "item_name": "AUG | Aristocrat (Minimal Wear)",
+        "image": "https:\/\/steamcommunity-a.akamaihd.net\/economy\/image\/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJD_tWlgI-IhfbgDLfYkWNF18lwmO7Eu9il2ACwqRFuYzrzJ9KUIwQ_YQ6G8wC3yefpjcLo7p_MyCA37HR2tnnD30vglNIOKno",
+        "customer_name": "veyr.a vreecase.com",
+        "steamid": "76561198155596416",
+        "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/f0\/f08c6823e94082afb45abdf589d93eb8411e4a81.jpg",
+        "quality_color": "8847FF"
     }];
 
+    marquee.creat(dataTest);
     setInterval(() => {
-        marquee.show(dataTest);
-    }, 2000)
-
+       marquee.creat(dataTest);
+    }, 10000)
 
 })(jQuery);
 
-
+/* Rect */
 var Rect = function (p, rs, re, minw, maxw, sc, s, o, ao, imgUrl) {
     this.p = p;
     this.rs = rs;
@@ -302,7 +283,7 @@ Rect.prototype = {
 
 }
 
-// bootstrap dropdown
+/* bootstrap dropdown */
 ;
 (function ($, window, undefined) {
     // outside the scope of the jQuery plugin to

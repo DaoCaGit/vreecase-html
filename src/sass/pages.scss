@@ -734,6 +734,13 @@ $brand-primary: #ffd800 !default;
                     flex: 1;
                     background-repeat: no-repeat;
                 }
+                .cate-icon-warp {
+                    height: 35px;
+                    overflow: hidden;
+                    .cate-icon {
+                        max-width: 100%;
+                    }
+                }
                 span {
                     display: block;
                 }
@@ -1818,7 +1825,7 @@ $brand-primary: #ffd800 !default;
 
 @media (min-width: 768px) {
     .deposit_box_operating .input-search {
-        width: 352px;
+        width: 305px;
     }
     .deposit_box_operating .skin-type {
         height: 42px;
@@ -2668,7 +2675,7 @@ $brand-primary: #ffd800 !default;
 
 .customers-messages .panel-title a {
     float: left;
-    color: #cfa7d5;
+    color: #89b6fa;
 }
 
 .customers-messages .msg-unread .panel-title a {
@@ -2681,7 +2688,7 @@ $brand-primary: #ffd800 !default;
     padding-bottom: 10px;
     border: 0;
     background: none;
-    color: #cfa7d5;
+    color: #89b6fa;
     line-height: 24px;
 }
 
@@ -2967,18 +2974,18 @@ $brand-primary: #ffd800 !default;
 
 .faq {
     margin: -30px;
-    background-color: #32193b;
+    background-color: #18223d;
     min-height: 560px;
     overflow: hidden;
 }
 
 .faq-left {
-    background-color: #32193b;
+    background-color: #16294a;
     width: 100%;
 }
 
 .faq-content {
-    background-color: #2c1235;
+    background-color: #18223d;
     min-height: 560px;
     padding: 0 30px;
 }
@@ -2991,31 +2998,32 @@ $brand-primary: #ffd800 !default;
 
 .faq-content .panel-default>.panel-heading+.panel-collapse>.panel-body {
     font-size: 14px;
-    color: #cfa7d5;
+    color: #89b6fa;
     padding: 20px 0;
 }
 
 .faq-content .panel-default>.panel-heading+.panel-collapse>.panel-body {
     border-top-color: #000;
-    border-bottom: 1px solid #3b1e46;
+    border-bottom: 1px solid #16294a;
     margin-top: -1px;
 }
 
 .faq-content .panel-default>.panel-heading {
     font-size: 16px;
-    color: #cfa7d5;
+    color: #89b6fa;
     padding: 21px 0;
-    border-bottom: 1px solid #3b1e46;
+    border-bottom: 1px solid #16294a;
 }
 
 .faq-content .panel-default>.panel-heading a {
     font-weight: bold;
+    text-decoration: none;
 }
 
 .faq-content .panel-default>.panel-heading a:hover,
 .faq-content .panel-default>.panel-heading a:active,
 .faq-content .panel-default>.panel-heading a:focus {
-    color: #cfa7d5;
+    color: #89b6fa;
 }
 
 @media (min-width: 768px) {
@@ -3026,7 +3034,7 @@ $brand-primary: #ffd800 !default;
         height: 100%;
     }
     .faq-content {
-        background-color: #2c1235;
+        background-color: #18223d;
         min-height: 560px;
         width: 78%;
     }
@@ -3079,13 +3087,12 @@ $brand-primary: #ffd800 !default;
 .faq .nav-tabs>li {
     margin: 0;
     cursor: default;
-    background-color: #32193b;
+    background-color: #16294a;
     border: 0px solid #32193b;
     border-bottom-color: transparent;
 }
 
 .faq .nav-tabs>li>a {
-    color: #cea7d4;
     border: 0;
     height: 60px;
     line-height: 60px;
@@ -3093,7 +3100,7 @@ $brand-primary: #ffd800 !default;
     border-radius: 0;
     padding: 0 30px;
     font-size: 16px;
-    color: #774a7a;
+    color: #89b6fa;
     background-image: url(../images/tab-line.png);
     background-repeat: no-repeat;
     background-size: auto;
@@ -3105,13 +3112,13 @@ $brand-primary: #ffd800 !default;
 }
 
 .faq .nav-tabs>li>a:hover {
-    background: #2c1235;
+    background: #18223d;
     color: #fff;
 }
 
 .faq .nav-tabs>li.active>a {
     border: 0;
-    background-color: #2c1235;
+    background-color: #18223d;
     color: #fff;
 }
 
@@ -3247,3 +3254,146 @@ $brand-primary: #ffd800 !default;
 
 
 /* u-box-dynamics  end */
+
+/* coupons start */
+
+.coupons {
+    padding-top: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: -58px;
+    display: inline-block;
+    
+}
+
+.coupons .coupp-card {
+	display: inline-block;
+	width: 166px;
+	height: 270px;
+	background: #fff;
+	background-image: url(../images/coupp.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 40px;
+	position: relative;
+    margin-right: 65px;
+}
+
+.coupons .coupp-card-img {
+	position: absolute;
+	bottom: 80px;
+	left: 50%;
+	margin-left: -45%;
+	width: 90%;
+}
+
+.coupons .coupp-click-me {
+	position: absolute;
+	top: 43px;
+	left: -33px;
+}
+
+.coupons .coupp-card-name {
+	position: absolute;
+	bottom: 95px;
+	line-height: 1;
+	font-size: 14px;
+	color: #0b0827;
+	text-align: center;
+	width: 100%;
+}
+
+.coupp-card-info {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	padding-top: 18px;
+    height: 75px;
+    text-align: center;
+}
+
+.coupp-card-info span {
+	display: block;
+	font-size: 18px;
+	color: #0b0827;
+	line-height: 1;
+	margin-bottom: 5px;
+}
+
+.coupp-card-info span.time {
+	font-size: 12px;
+	color: #666666;
+}
+
+.coupons-content-title {
+    font-size: 18px;
+    color: #89b6fb;
+    line-height: 1;
+    border-bottom: 1px solid #295185;
+    line-height: 65px;
+    height: 65px;
+}
+
+/* coupons end */
+
+
+/* com-tabs start */
+.com-tabs {
+	margin: 0;
+    padding: 0;
+    line-height: 58px;
+    float: right;
+}
+
+.com-tabs li {
+	float: left;
+	margin: 0;
+}
+
+.com-tabs li {
+	padding: 0 20px;
+	position: relative;
+}
+
+.com-tabs li::after {
+	content: "";
+	position: absolute;
+	height: 18px;
+	width: 1px;
+	background: #295185;
+	right: 0;
+	top: 22px;
+}
+
+.com-tabs li:last-child {
+	border: 0;
+	padding-right: 0;
+}
+
+.com-tabs li:last-child::after {
+	width: 0;
+}
+
+.com-tabs li a {
+	font-size: 16px;
+	font-weight: bold;
+    color: #89b6fb;
+    text-decoration: none;
+}
+
+.com-tabs li.active a {
+	color: #ffd800;
+}
+
+.com-tabs li .icon {
+	margin-right: 6px;
+	font-size: 20px;
+	vertical-align: middle;
+	font-weight: normal;
+}
+
+.com-tabs li .icon-pubg {
+    font-size: 30px;
+}
+/* com-tabs end */

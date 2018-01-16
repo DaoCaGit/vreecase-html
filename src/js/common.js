@@ -156,7 +156,7 @@ function numberformat(val){
             });
 
             boxsNew = '<ul class="boxs-live-list clearfix">' + boxsNew + '</ul>';
-            listView =  $('<div class="list-view"></div>');
+            var listView =  $('<div class="list-view"></div>');
             var kidsheight = data.length * kidheight;
             listView.html(boxsNew);
             listView.css({'height': '0px', 'transform': 'translate3d(0px, -' + kidsheight + 'px, 0px)'});
@@ -175,43 +175,43 @@ function numberformat(val){
         return this;
     }
 
-    var marquee = $('#dropMarquee').dropMarquee();
-    var dataTest = [{
-        "item_name": "R8 Revolver | Crimson Web (Well-Worn)",
-        "image": "https:\/\/steamcommunity-a.akamaihd.net\/economy\/image\/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopL-zJAt21uH3eSR9-9m0h7-GkvP9JrbummpD78A_3rmXo42ijATh8hA9azz3I4PHclM_NQnX8wXsx7juhsO478-fyCQx7D5iuyhlLV5UlA",
-        "customer_name": "Axcerty",
-        "steamid": "76561198370947142",
-        "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/eb\/ebfb74f46188ab433eeaee23a9213f70933ed656.jpg",
-        "quality_color": "4B69FF"
-    }, {
-        "item_name": "P250 | Metallic DDPAT (Factory New)",
-        "image": "https:\/\/steamcommunity-a.akamaihd.net\/economy\/image\/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhh3szdYz9D4uO6nYeDg8j4MqnWkyUD7pN0jL2WrYis31e2-UtkZD-gIIeVdFVoaVHX_Fnox7281sK06cnP1zI97bNcM7TE",
-        "customer_name": "ChroMaHuN  vreecase.com",
-        "steamid": "76561198388496951",
-        "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/12\/12424301360aa0e50f2986b7eaf6f3ffd687f498.jpg",
-        "quality_color": "5E98D9"
-    },{
-        "item_name": "R8 Revolver | Crimson Web (Well-Worn)",
-        "image": "https:\/\/steamcommunity-a.akamaihd.net\/economy\/image\/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopL-zJAt21uH3eSR9-9m0h7-GkvP9JrbummpD78A_3rmXo42ijATh8hA9azz3I4PHclM_NQnX8wXsx7juhsO478-fyCQx7D5iuyhlLV5UlA",
-        "customer_name": "Axcerty",
-        "steamid": "76561198370947142",
-        "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/eb\/ebfb74f46188ab433eeaee23a9213f70933ed656.jpg",
-        "quality_color": "4B69FF"
-    },{
-        "item_name": "AUG | Aristocrat (Minimal Wear)",
-        "image": "https:\/\/steamcommunity-a.akamaihd.net\/economy\/image\/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJD_tWlgI-IhfbgDLfYkWNF18lwmO7Eu9il2ACwqRFuYzrzJ9KUIwQ_YQ6G8wC3yefpjcLo7p_MyCA37HR2tnnD30vglNIOKno",
-        "customer_name": "veyr.a vreecase.com",
-        "steamid": "76561198155596416",
-        "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/f0\/f08c6823e94082afb45abdf589d93eb8411e4a81.jpg",
-        "quality_color": "8847FF"
-    }];
-
-    marquee.creat(dataTest);
-    setInterval(() => {
-       marquee.creat(dataTest);
-    }, 10000)
-
 })(jQuery);
+
+var marquee = $('#dropMarquee').dropMarquee();
+var dataTest = [{
+    "item_name": "R8 Revolver | Crimson Web (Well-Worn)",
+    "image": "https:\/\/steamcommunity-a.akamaihd.net\/economy\/image\/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopL-zJAt21uH3eSR9-9m0h7-GkvP9JrbummpD78A_3rmXo42ijATh8hA9azz3I4PHclM_NQnX8wXsx7juhsO478-fyCQx7D5iuyhlLV5UlA",
+    "customer_name": "Axcerty",
+    "steamid": "76561198370947142",
+    "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/eb\/ebfb74f46188ab433eeaee23a9213f70933ed656.jpg",
+    "quality_color": "4B69FF"
+}, {
+    "item_name": "P250 | Metallic DDPAT (Factory New)",
+    "image": "https:\/\/steamcommunity-a.akamaihd.net\/economy\/image\/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhh3szdYz9D4uO6nYeDg8j4MqnWkyUD7pN0jL2WrYis31e2-UtkZD-gIIeVdFVoaVHX_Fnox7281sK06cnP1zI97bNcM7TE",
+    "customer_name": "ChroMaHuN  vreecase.com",
+    "steamid": "76561198388496951",
+    "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/12\/12424301360aa0e50f2986b7eaf6f3ffd687f498.jpg",
+    "quality_color": "5E98D9"
+},{
+    "item_name": "R8 Revolver | Crimson Web (Well-Worn)",
+    "image": "https:\/\/steamcommunity-a.akamaihd.net\/economy\/image\/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopL-zJAt21uH3eSR9-9m0h7-GkvP9JrbummpD78A_3rmXo42ijATh8hA9azz3I4PHclM_NQnX8wXsx7juhsO478-fyCQx7D5iuyhlLV5UlA",
+    "customer_name": "Axcerty",
+    "steamid": "76561198370947142",
+    "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/eb\/ebfb74f46188ab433eeaee23a9213f70933ed656.jpg",
+    "quality_color": "4B69FF"
+},{
+    "item_name": "AUG | Aristocrat (Minimal Wear)",
+    "image": "https:\/\/steamcommunity-a.akamaihd.net\/economy\/image\/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJD_tWlgI-IhfbgDLfYkWNF18lwmO7Eu9il2ACwqRFuYzrzJ9KUIwQ_YQ6G8wC3yefpjcLo7p_MyCA37HR2tnnD30vglNIOKno",
+    "customer_name": "veyr.a vreecase.com",
+    "steamid": "76561198155596416",
+    "avatar": "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/f0\/f08c6823e94082afb45abdf589d93eb8411e4a81.jpg",
+    "quality_color": "8847FF"
+}];
+
+marquee.creat(dataTest);
+setInterval(() => {
+   marquee.creat(dataTest);
+}, 2000)
 
 /* Rect */
 var Rect = function (p, rs, re, minw, maxw, sc, s, o, ao, imgUrl) {

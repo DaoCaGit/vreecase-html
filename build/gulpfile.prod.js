@@ -8,6 +8,7 @@ var jshint = require('gulp-jshint'); //js检查 ==> npm install --save-dev jshin
 var uglify = require('gulp-uglify'); //js压缩  
 var gulpif = require('gulp-if'); // gulp排除文件的用法
 var concat = require('gulp-concat'); //合并文件 
+var cleancss = require('gulp-clean-css');
 var useref = require('gulp-useref');
 var path = require('path');
 var imagemin = require('gulp-imagemin'); //图片压缩 
@@ -53,8 +54,8 @@ function prod() {
     gulp.task('sass', function () {
         return gulp.src(Config.sass.src).pipe(autoprefixer('last 2 version')).pipe(sass()).pipe(gulp.dest(Config.sass.dist)).pipe(rename({
                 suffix: '.min'
-            })) //rename压缩后的文件名  
-            .pipe(cssnano()) //执行压缩  
+            })) //rename压缩后的文件名
+            .pipe(cleancss({compatibility: 'ie9'}))
             .pipe(gulp.dest(Config.sass.dist));
     });
     /** 

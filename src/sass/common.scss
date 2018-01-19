@@ -376,6 +376,7 @@ li {
     color: #18223d;
     border: 1px solid #101326;
     width: 100%;
+    overflow: hidden;
 }
 
 .live-count .live-count-icon {
@@ -386,8 +387,8 @@ li {
 }
 
 .live-count .live-count-info {
-    float: left;
-    padding-top: 14px;
+    padding-left: 35px;
+    padding-top: 10px;
 }
 
 .live-count .live-count-info span {
@@ -397,8 +398,9 @@ li {
 }
 
 .live-count .live-count-info span.label {
-    font-size: 18px;
+    font-size: 16px;
     color: #295185;
+    text-align: left;
 }
 
 .live-count .live-count-info span.value {
@@ -617,12 +619,37 @@ li {
 .nav>li>a:focus,
 .nav>li>a:hover {
     text-decoration: none;
-    background-color: #bd0500;
+    background: #bd0500 !important;
+    color: #fff;
 }
 
 .navbar-nav>li.active {
     text-decoration: none;
     background-color: #bd0500;
+}
+
+.effects {
+    color: #46ff4f;
+    background: -webkit-linear-gradient(left, #46ff4f, #deff00);
+    background: -o-linear-gradient(left, #46ff4f, #deff00);
+    background: -moz-linear-gradient(left, #46ff4f, #deff00);
+    background: linear-gradient(left, #46ff4f, #deff00);
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+.nav>li>a.effects:focus,
+.nav>li>a.effects:hover {
+    -webkit-text-fill-color: #fff;
+    -o-text-fill-color: #fff;
+    -moz-text-fill-color: #fff;
+    text-fill-color: #fff;
 }
 
 
@@ -656,12 +683,14 @@ li {
 /* case-title start */
 
 .weapon-case-title {
-    width: 100%;
-    height: 37px;
-    background: url('../images/element/case-title.png') no-repeat;
-    background-position: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    &.com-title {
+        margin: 12px 0;
+        .com-title-text {
+            font-size: 26px;
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+    }
 }
 
 .weapon-case-group {
@@ -779,7 +808,7 @@ li {
     display: block;
 }
 
-.weapon-case .weapon-case-item .case-title {
+.weapon-case .weapon-case-item .case-name {
     font-size: 14px;
     color: #fff;
     font-family: '[EuphemiaCAS]';
@@ -889,6 +918,8 @@ li {
     .foot-bottom {
         min-height: 300px;
         background-color: #0b0827;
+        padding: 0 30px;
+        padding-bottom: 30px;
         .foot-bottom-t {
             padding: 40px 0;
             .item {
@@ -898,6 +929,10 @@ li {
                     font-size: 16px;
                     color: #608ecc;
                     margin-bottom: 15px;
+                }
+                .payment-img {
+                    display: block;
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -925,6 +960,41 @@ li {
             }
         }
     }
+}
+
+@media (min-width: 1460px) {
+    .foot-container {
+        width: 1230px !important;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer-wrapper {
+        .foot-bottom {
+            padding: 0;
+            .foot-bottom-t {
+                .item {
+                    .payment-img {
+                        display: inline-block;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.links-warp {
+    position: relative;
+}
+
+.links-warp a {
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    top: 0;
 }
 
 .breadcrumb {
@@ -1478,5 +1548,30 @@ fieldset[disabled] .form-control {
             font-size: 14px;
             padding: 6px 24px;
         }
+    }
+}
+
+.msg-cus {
+    width: 1200px;
+    height: 30px;
+    background: url(../images/msg-cus-bg.png) no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: #fbd900;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    .icon {
+        vertical-align: middle;
+    }
+    &.success {
+        color: #01af1c; 
+    }
+    &.warning {
+        color: #fbd900; 
+    }
+    &.error {
+        color: #bd0602; 
     }
 }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./head.html')
+</head>
+
+<body>
+    <main class="main-wrapper full">
+
+        @@include('./drop-left.html', {"live": "hide"})
+
+        <div class="content-wrap">
+
+            @@include('./header.html') @@include('./navbar.html')
+
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="home">
+                        <a href="/">
+                            <i class="icon iconfont icon-home"></i> Home</a>
+                    </li>
+                    <li class="active">verifying</li>
+                </ol>
+            </div>
+
+            <div class="container">
+
+                <!-- content start -->
+                <div class="content phone-verification">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <p style="color: #ffd800; margin-bottom: 20px;" ><i class="icon iconfont icon-tip"></i> For security reasons,please finish a phone verification as well.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <form>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="tel">
+                                        <span style="color: red" class="text-danger">* </span>Verifying Your Phone :</label>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon2">7002</span>
+                                        <input type="tel" class="form-control" id="phone_number" value="" name="phone_number" placeholder="Please enter your phone number"
+                                            aria-describedby="sizing-addon2" onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                            onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                                    </div>
+                                </div>
+                                <input type="button" id="method_vod" data-type="call" value="CALL" class="btn btn-primary">
+                                <span style="padding: 6px; color: #89b6fb;">or</span>
+                                <input type="button" id="method_sms" data-type="sms" value="SMS" class="btn btn-primary">
+                                <div id="tips" class="vtips"></div>
+                                <div>
+                                    <span class="text-danger" style="display: inline-block; margin-top: 2px;" id="phone_number_tips"></span>
+                                </div>
+                                <div class="form-group" style="margin-top: 25px;display:none;" id="phone_code_box">
+                                    <label for="pin_code">Pin code :</label>
+
+                                    <input type="text" class="form-control" id="pin_code" name="pin_code" placeholder="Please enter the verification code">
+                                    <button type="button" class="btn btn-warning" id="method_post" style="margin-top:10px;">Submit</button>
+                                    <div id="pctips" class="vtips"></div>
+                                </div>
+
+
+                            </div>
+
+                        </form>
+                    </div>
+                    <p class="notice" style="line-height: 2.6; color: #295185">verification is only for the first purchase</p>
+                </div>
+                <!-- content end -->
+
+            </div>
+
+            @@include('./footer.html')
+
+        </div>
+    </main>
+
+
+    @@include('./foot.html')
+</body>
+
+</html>
